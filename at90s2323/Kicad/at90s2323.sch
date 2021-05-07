@@ -1,0 +1,3463 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "AT90S2323/AT90S2343 demo board"
+Date "2021-04-11"
+Rev "V1.0"
+Comp "https://github.com/atoomnetmarc/AVR-demo-board"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR031
+U 1 1 5FD3ECE8
+P 9250 1750
+F 0 "#PWR031" H 9250 1500 50  0001 C CNN
+F 1 "GND" H 9255 1577 50  0000 C CNN
+F 2 "" H 9250 1750 50  0001 C CNN
+F 3 "" H 9250 1750 50  0001 C CNN
+	1    9250 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 1600 9250 1750
+$Comp
+L power:+5V #PWR016
+U 1 1 5FD3F237
+P 2500 5500
+F 0 "#PWR016" H 2500 5350 50  0001 C CNN
+F 1 "+5V" H 2515 5673 50  0000 C CNN
+F 2 "" H 2500 5500 50  0001 C CNN
+F 3 "" H 2500 5500 50  0001 C CNN
+	1    2500 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5650 2500 5500
+$Comp
+L Connector:AVR-ISP-10 J2
+U 1 1 5FD3F836
+P 1200 3650
+F 0 "J2" H 870 3746 50  0000 R CNN
+F 1 "AVR-ISP-10" H 1600 3300 50  0000 R CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" V 950 3700 50  0001 C CNN
+F 3 " ~" H -75 3100 50  0001 C CNN
+	1    1200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR014
+U 1 1 5FD412DC
+P 1100 2800
+F 0 "#PWR014" H 1100 2650 50  0001 C CNN
+F 1 "+5V" H 1115 2973 50  0000 C CNN
+F 2 "" H 1100 2800 50  0001 C CNN
+F 3 "" H 1100 2800 50  0001 C CNN
+	1    1100 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 5FD41715
+P 1100 4300
+F 0 "#PWR029" H 1100 4050 50  0001 C CNN
+F 1 "GND" H 1105 4127 50  0000 C CNN
+F 2 "" H 1100 4300 50  0001 C CNN
+F 3 "" H 1100 4300 50  0001 C CNN
+	1    1100 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 4300 1100 4050
+Wire Wire Line
+	1100 3150 1100 2800
+Text GLabel 2300 3750 2    50   Output ~ 0
+~RESET
+Text GLabel 1750 5950 0    50   Input ~ 0
+~RESET
+$Comp
+L Device:Crystal Y1
+U 1 1 5FD437BC
+P 6550 1350
+F 0 "Y1" H 6550 1618 50  0000 C CNN
+F 1 "10MHz" H 6550 1527 50  0000 C CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 6550 1350 50  0001 C CNN
+F 3 "~" H 6550 1350 50  0001 C CNN
+	1    6550 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7805 U4
+U 1 1 5FD465E2
+P 2750 1250
+F 0 "U4" H 2750 1492 50  0000 C CNN
+F 1 "L7805" H 2750 1401 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 2775 1100 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 2750 1200 50  0001 C CNN
+	1    2750 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C3
+U 1 1 5FD46C22
+P 2050 1650
+F 0 "C3" H 2168 1696 50  0000 L CNN
+F 1 "100uF 16V" H 2168 1605 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2088 1500 50  0001 C CNN
+F 3 "~" H 2050 1650 50  0001 C CNN
+	1    2050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C4
+U 1 1 5FD47154
+P 3400 1650
+F 0 "C4" H 3518 1696 50  0000 L CNN
+F 1 "33uF 16V" H 3518 1605 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3438 1500 50  0001 C CNN
+F 3 "~" H 3400 1650 50  0001 C CNN
+	1    3400 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1250 3400 1250
+Wire Wire Line
+	3400 1250 3400 1500
+Wire Wire Line
+	2450 1250 2050 1250
+Wire Wire Line
+	2050 1250 2050 1500
+$Comp
+L power:GND #PWR022
+U 1 1 5FD48205
+P 2750 2100
+F 0 "#PWR022" H 2750 1850 50  0001 C CNN
+F 1 "GND" H 2755 1927 50  0000 C CNN
+F 2 "" H 2750 2100 50  0001 C CNN
+F 3 "" H 2750 2100 50  0001 C CNN
+	1    2750 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 1550 2750 2100
+$Comp
+L power:GND #PWR023
+U 1 1 5FD489E6
+P 3400 2100
+F 0 "#PWR023" H 3400 1850 50  0001 C CNN
+F 1 "GND" H 3405 1927 50  0000 C CNN
+F 2 "" H 3400 2100 50  0001 C CNN
+F 3 "" H 3400 2100 50  0001 C CNN
+	1    3400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5FD48BD3
+P 2050 2100
+F 0 "#PWR021" H 2050 1850 50  0001 C CNN
+F 1 "GND" H 2055 1927 50  0000 C CNN
+F 2 "" H 2050 2100 50  0001 C CNN
+F 3 "" H 2050 2100 50  0001 C CNN
+	1    2050 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1800 2050 2100
+Wire Wire Line
+	3400 1800 3400 2100
+$Comp
+L power:+5V #PWR017
+U 1 1 5FD49969
+P 3850 900
+F 0 "#PWR017" H 3850 750 50  0001 C CNN
+F 1 "+5V" H 3865 1073 50  0000 C CNN
+F 2 "" H 3850 900 50  0001 C CNN
+F 3 "" H 3850 900 50  0001 C CNN
+	1    3850 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1250 3850 1250
+Wire Wire Line
+	3850 1250 3850 900 
+Connection ~ 3400 1250
+$Comp
+L Connector:Barrel_Jack_Switch J1
+U 1 1 5FD4C62A
+P 850 1350
+F 0 "J1" H 907 1667 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 907 1576 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 900 1310 50  0001 C CNN
+F 3 "~" H 900 1310 50  0001 C CNN
+	1    850  1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D129
+U 1 1 5FD4DE9E
+P 1600 1250
+F 0 "D129" H 1600 1033 50  0000 C CNN
+F 1 "1N5819" H 1600 1124 50  0000 C CNN
+F 2 "Diode_THT:D_DO-15_P5.08mm_Vertical_KathodeUp" H 1600 1250 50  0001 C CNN
+F 3 "~" H 1600 1250 50  0001 C CNN
+	1    1600 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5FD4E877
+P 1250 2100
+F 0 "#PWR020" H 1250 1850 50  0001 C CNN
+F 1 "GND" H 1255 1927 50  0000 C CNN
+F 2 "" H 1250 2100 50  0001 C CNN
+F 3 "" H 1250 2100 50  0001 C CNN
+	1    1250 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1350 1250 1350
+Wire Wire Line
+	1250 1350 1250 1450
+Wire Wire Line
+	1150 1450 1250 1450
+Connection ~ 1250 1450
+Wire Wire Line
+	1250 1450 1250 1950
+Wire Wire Line
+	1150 1250 1450 1250
+Wire Wire Line
+	1750 1250 2050 1250
+Connection ~ 2050 1250
+$Comp
+L Device:C C7
+U 1 1 5FD50B9A
+P 1150 6350
+F 0 "C7" H 1265 6396 50  0000 L CNN
+F 1 "100nF" H 1265 6305 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 1188 6200 50  0001 C CNN
+F 3 "~" H 1150 6350 50  0001 C CNN
+	1    1150 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR013
+U 1 1 5FD516A4
+P 1150 5600
+F 0 "#PWR013" H 1150 5450 50  0001 C CNN
+F 1 "+5V" H 1165 5773 50  0000 C CNN
+F 2 "" H 1150 5600 50  0001 C CNN
+F 3 "" H 1150 5600 50  0001 C CNN
+	1    1150 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR027
+U 1 1 5FD51837
+P 1150 7050
+F 0 "#PWR027" H 1150 6800 50  0001 C CNN
+F 1 "GND" H 1155 6877 50  0000 C CNN
+F 2 "" H 1150 7050 50  0001 C CNN
+F 3 "" H 1150 7050 50  0001 C CNN
+	1    1150 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 6500 1150 7050
+Wire Wire Line
+	1150 6200 1150 5600
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5FD5DDB5
+P 7700 1150
+F 0 "H1" H 7800 1196 50  0000 L CNN
+F 1 "MountingHole" H 7800 1105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 7700 1150 50  0001 C CNN
+F 3 "~" H 7700 1150 50  0001 C CNN
+	1    7700 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5FD5E76A
+P 7700 1350
+F 0 "H2" H 7800 1396 50  0000 L CNN
+F 1 "MountingHole" H 7800 1305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 7700 1350 50  0001 C CNN
+F 3 "~" H 7700 1350 50  0001 C CNN
+	1    7700 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5FD5E8D5
+P 7700 1550
+F 0 "H3" H 7800 1596 50  0000 L CNN
+F 1 "MountingHole" H 7800 1505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 7700 1550 50  0001 C CNN
+F 3 "~" H 7700 1550 50  0001 C CNN
+	1    7700 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5FD5EA2A
+P 7700 1750
+F 0 "H4" H 7800 1796 50  0000 L CNN
+F 1 "MountingHole" H 7800 1705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 7700 1750 50  0001 C CNN
+F 3 "~" H 7700 1750 50  0001 C CNN
+	1    7700 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 5FD731DB
+P 8850 1400
+F 0 "J3" H 8958 1681 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 8958 1590 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8850 1400 50  0001 C CNN
+F 3 "~" H 8850 1400 50  0001 C CNN
+	1    8850 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J4
+U 1 1 5FD784E0
+P 10450 1500
+F 0 "J4" H 10422 1382 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 10422 1473 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10450 1500 50  0001 C CNN
+F 3 "~" H 10450 1500 50  0001 C CNN
+	1    10450 1500
+	-1   0    0    1   
+$EndComp
+Text GLabel 9450 1300 2    50   BiDi ~ 0
+~RESET
+Text GLabel 9150 1400 2    50   BiDi ~ 0
+XTAL1
+Text GLabel 9150 1500 2    50   BiDi ~ 0
+XTAL2
+Text GLabel 10150 1500 0    50   BiDi ~ 0
+PB1
+Text GLabel 10150 1600 0    50   BiDi ~ 0
+PB0
+Wire Wire Line
+	9050 1300 9450 1300
+Wire Wire Line
+	1750 5950 1900 5950
+Wire Wire Line
+	9050 1400 9150 1400
+Wire Wire Line
+	9050 1500 9150 1500
+Wire Wire Line
+	10150 1500 10250 1500
+Wire Wire Line
+	10150 1600 10250 1600
+Text GLabel 1800 6300 0    50   BiDi ~ 0
+XTAL1
+Text GLabel 1800 6400 0    50   BiDi ~ 0
+XTAL2
+Text GLabel 3250 6200 2    50   BiDi ~ 0
+PB2
+Text GLabel 3250 6300 2    50   BiDi ~ 0
+PB1
+Text GLabel 3250 6400 2    50   BiDi ~ 0
+PB0
+Wire Wire Line
+	3100 6200 3250 6200
+Wire Wire Line
+	3100 6300 3250 6300
+Wire Wire Line
+	3100 6400 3250 6400
+Wire Wire Line
+	1800 6300 1900 6300
+Wire Wire Line
+	1900 6400 1800 6400
+Text GLabel 6250 1150 1    50   BiDi ~ 0
+XTAL1
+Text GLabel 6850 1150 1    50   BiDi ~ 0
+XTAL2
+Connection ~ 6250 1350
+Wire Wire Line
+	6250 1150 6250 1350
+Wire Wire Line
+	6250 1350 6400 1350
+Wire Wire Line
+	6850 1150 6850 1350
+Connection ~ 6850 1350
+Wire Wire Line
+	6700 1350 6850 1350
+Wire Wire Line
+	6850 1650 6850 1850
+Wire Wire Line
+	6250 1850 6250 1650
+$Comp
+L power:GND #PWR025
+U 1 1 5FD458E2
+P 6250 1850
+F 0 "#PWR025" H 6250 1600 50  0001 C CNN
+F 1 "GND" H 6255 1677 50  0000 C CNN
+F 2 "" H 6250 1850 50  0001 C CNN
+F 3 "" H 6250 1850 50  0001 C CNN
+	1    6250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 5FD45798
+P 6850 1850
+F 0 "#PWR026" H 6850 1600 50  0001 C CNN
+F 1 "GND" H 6855 1677 50  0000 C CNN
+F 2 "" H 6850 1850 50  0001 C CNN
+F 3 "" H 6850 1850 50  0001 C CNN
+	1    6850 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FD44983
+P 6250 1500
+F 0 "C1" H 6136 1546 50  0000 R CNN
+F 1 "15pF" H 6136 1455 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 6288 1350 50  0001 C CNN
+F 3 "~" H 6250 1500 50  0001 C CNN
+	1    6250 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FD445FA
+P 6850 1500
+F 0 "C2" H 6965 1546 50  0000 L CNN
+F 1 "15pF" H 6965 1455 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 6888 1350 50  0001 C CNN
+F 3 "~" H 6850 1500 50  0001 C CNN
+	1    6850 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5FE178AD
+P 5100 1000
+F 0 "SW1" H 5100 1285 50  0000 C CNN
+F 1 "SW_Push" H 5100 1194 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 5100 1200 50  0001 C CNN
+F 3 "~" H 5100 1200 50  0001 C CNN
+	1    5100 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 5FE1C2C5
+P 5500 2050
+F 0 "#PWR019" H 5500 1800 50  0001 C CNN
+F 1 "GND" H 5505 1877 50  0000 C CNN
+F 2 "" H 5500 2050 50  0001 C CNN
+F 3 "" H 5500 2050 50  0001 C CNN
+	1    5500 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1000 5500 1000
+$Comp
+L Device:R R17
+U 1 1 5FE9CCFD
+P 2000 3050
+F 0 "R17" H 2070 3096 50  0000 L CNN
+F 1 "100k" H 2070 3005 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1930 3050 50  0001 C CNN
+F 3 "~" H 2000 3050 50  0001 C CNN
+	1    2000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR015
+U 1 1 5FE9D152
+P 2000 2800
+F 0 "#PWR015" H 2000 2650 50  0001 C CNN
+F 1 "+5V" H 2015 2973 50  0000 C CNN
+F 2 "" H 2000 2800 50  0001 C CNN
+F 3 "" H 2000 2800 50  0001 C CNN
+	1    2000 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3200 2000 3750
+Wire Wire Line
+	1600 3750 2000 3750
+Connection ~ 2000 3750
+Wire Wire Line
+	2000 3750 2300 3750
+Wire Wire Line
+	2000 2900 2000 2800
+$Comp
+L MCU_Microchip_AVR-extra:AT90S2323 U5
+U 1 1 60725C9D
+P 2500 6250
+F 0 "U5" H 2600 6900 50  0000 C CNN
+F 1 "AT90S2323" H 2750 6800 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 2500 6250 50  0001 C CIN
+F 3 "" H 2500 6250 50  0001 C CNN
+	1    2500 6250
+	1    0    0    -1  
+$EndComp
+Text GLabel 1700 3550 2    50   BiDi ~ 0
+PB0
+Wire Wire Line
+	1600 3550 1700 3550
+Text GLabel 1700 3450 2    50   BiDi ~ 0
+PB1
+Wire Wire Line
+	1600 3450 1700 3450
+Text GLabel 1700 3650 2    50   BiDi ~ 0
+PB2
+Wire Wire Line
+	1600 3650 1700 3650
+Wire Wire Line
+	5500 1000 5500 2050
+Text GLabel 4650 1000 0    50   Output ~ 0
+~RESET
+Wire Wire Line
+	4650 1000 4900 1000
+Wire Wire Line
+	10150 1400 10250 1400
+Text GLabel 10150 1400 0    50   BiDi ~ 0
+PB2
+$Comp
+L power:+5V #PWR030
+U 1 1 607950E6
+P 10050 1150
+F 0 "#PWR030" H 10050 1000 50  0001 C CNN
+F 1 "+5V" H 10065 1323 50  0000 C CNN
+F 2 "" H 10050 1150 50  0001 C CNN
+F 3 "" H 10050 1150 50  0001 C CNN
+	1    10050 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 1300 10050 1150
+Wire Wire Line
+	10050 1300 10250 1300
+Wire Wire Line
+	9050 1600 9250 1600
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 607988E3
+P 1550 2100
+F 0 "#FLG02" H 1550 2175 50  0001 C CNN
+F 1 "PWR_FLAG" H 1550 2273 50  0000 C CNN
+F 2 "" H 1550 2100 50  0001 C CNN
+F 3 "~" H 1550 2100 50  0001 C CNN
+	1    1550 2100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 2100 1550 1950
+Wire Wire Line
+	1550 1950 1250 1950
+Connection ~ 1250 1950
+Wire Wire Line
+	1250 1950 1250 2100
+$Comp
+L power:GND #PWR028
+U 1 1 60799F4A
+P 2500 6950
+F 0 "#PWR028" H 2500 6700 50  0001 C CNN
+F 1 "GND" H 2505 6777 50  0000 C CNN
+F 2 "" H 2500 6950 50  0001 C CNN
+F 3 "" H 2500 6950 50  0001 C CNN
+	1    2500 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 6950 2500 6850
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 6079B57F
+P 2050 900
+F 0 "#FLG01" H 2050 975 50  0001 C CNN
+F 1 "PWR_FLAG" H 2050 1073 50  0000 C CNN
+F 2 "" H 2050 900 50  0001 C CNN
+F 3 "~" H 2050 900 50  0001 C CNN
+	1    2050 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 900  2050 1250
+$Comp
+L power:GND #PWR012
+U 1 1 607AF261
+P 4750 6200
+F 0 "#PWR012" H 4750 5950 50  0001 C CNN
+F 1 "GND" H 4755 6027 50  0000 C CNN
+F 2 "" H 4750 6200 50  0001 C CNN
+F 3 "" H 4750 6200 50  0001 C CNN
+	1    4750 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR09
+U 1 1 607B05D6
+P 4750 4500
+F 0 "#PWR09" H 4750 4350 50  0001 C CNN
+F 1 "+5V" H 4765 4673 50  0000 C CNN
+F 2 "" H 4750 4500 50  0001 C CNN
+F 3 "" H 4750 4500 50  0001 C CNN
+	1    4750 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4500 4750 4750
+Wire Wire Line
+	4750 6200 4750 6050
+$Comp
+L power:+5V #PWR08
+U 1 1 607B6102
+P 4000 4500
+F 0 "#PWR08" H 4000 4350 50  0001 C CNN
+F 1 "+5V" H 4015 4673 50  0000 C CNN
+F 2 "" H 4000 4500 50  0001 C CNN
+F 3 "" H 4000 4500 50  0001 C CNN
+	1    4000 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5250 4000 5250
+Wire Wire Line
+	4000 5250 4000 4500
+$Comp
+L 74xx:74HC595 U1
+U 1 1 607A8D3C
+P 7550 3300
+F 0 "U1" H 7650 3950 50  0000 C CNN
+F 1 "74HC595" H 7750 3850 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 7550 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7550 3300 50  0001 C CNN
+	1    7550 3300
+	0    -1   1    0   
+$EndComp
+Text GLabel 3900 5550 0    50   Input ~ 0
+PB0
+Wire Wire Line
+	3900 4950 4250 4950
+Wire Wire Line
+	3900 5150 4250 5150
+Text GLabel 3900 5150 0    50   Input ~ 0
+PB2
+$Comp
+L Interface_Expansion-extra:TPIC6B595 U3
+U 1 1 607C9645
+P 4750 5350
+F 0 "U3" H 4850 6000 50  0000 C CNN
+F 1 "TPIC6B595" H 5000 5900 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm_LongPads" H 5400 4700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tpic6b595.pdf" H 4750 5300 50  0001 C CNN
+	1    4750 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D1
+U 1 1 607F7767
+P 6300 4550
+F 0 "D1" H 6300 4500 20  0000 C CNN
+F 1 "blue opaque" V 6255 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6300 4550 50  0001 C CNN
+F 3 "~" V 6300 4550 50  0001 C CNN
+	1    6300 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D17
+U 1 1 6081B738
+P 6300 4800
+F 0 "D17" H 6300 4750 20  0000 C CNN
+F 1 "blue opaque" V 6255 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6300 4800 50  0001 C CNN
+F 3 "~" V 6300 4800 50  0001 C CNN
+	1    6300 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D33
+U 1 1 6081DAF3
+P 6300 5050
+F 0 "D33" H 6300 5000 20  0000 C CNN
+F 1 "blue opaque" V 6255 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6300 5050 50  0001 C CNN
+F 3 "~" V 6300 5050 50  0001 C CNN
+	1    6300 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D49
+U 1 1 6081ECE8
+P 6300 5300
+F 0 "D49" H 6300 5250 20  0000 C CNN
+F 1 "blue opaque" V 6255 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6300 5300 50  0001 C CNN
+F 3 "~" V 6300 5300 50  0001 C CNN
+	1    6300 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D81
+U 1 1 6081F483
+P 6300 5800
+F 0 "D81" H 6300 5750 20  0000 C CNN
+F 1 "blue opaque" V 6255 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6300 5800 50  0001 C CNN
+F 3 "~" V 6300 5800 50  0001 C CNN
+	1    6300 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D97
+U 1 1 6081F8DB
+P 6300 6050
+F 0 "D97" H 6300 6000 20  0000 C CNN
+F 1 "blue opaque" V 6255 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6300 6050 50  0001 C CNN
+F 3 "~" V 6300 6050 50  0001 C CNN
+	1    6300 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D113
+U 1 1 6081FC78
+P 6300 6300
+F 0 "D113" H 6300 6250 20  0000 C CNN
+F 1 "blue opaque" V 6255 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6300 6300 50  0001 C CNN
+F 3 "~" V 6300 6300 50  0001 C CNN
+	1    6300 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 6400 4450
+Wire Wire Line
+	6400 4450 6400 4700
+$Comp
+L Device-extra:LED_Small-45 D65
+U 1 1 6081F05E
+P 6300 5550
+F 0 "D65" H 6300 5500 20  0000 C CNN
+F 1 "blue opaque" V 6255 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6300 5550 50  0001 C CNN
+F 3 "~" V 6300 5550 50  0001 C CNN
+	1    6300 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4950 6400 4700
+Connection ~ 6400 4700
+Wire Wire Line
+	6400 4950 6400 5200
+Connection ~ 6400 4950
+Wire Wire Line
+	6400 5200 6400 5450
+Connection ~ 6400 5200
+Wire Wire Line
+	6400 5700 6400 5450
+Connection ~ 6400 5450
+Wire Wire Line
+	6400 5700 6400 5950
+Connection ~ 6400 5700
+Wire Wire Line
+	6400 5950 6400 6200
+Connection ~ 6400 5950
+$Comp
+L Device-extra:LED_Small-45 D2
+U 1 1 60895D23
+P 6600 4550
+F 0 "D2" H 6600 4500 20  0000 C CNN
+F 1 "blue opaque" V 6555 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6600 4550 50  0001 C CNN
+F 3 "~" V 6600 4550 50  0001 C CNN
+	1    6600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D18
+U 1 1 60895D30
+P 6600 4800
+F 0 "D18" H 6600 4750 20  0000 C CNN
+F 1 "blue opaque" V 6555 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6600 4800 50  0001 C CNN
+F 3 "~" V 6600 4800 50  0001 C CNN
+	1    6600 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D34
+U 1 1 60895D36
+P 6600 5050
+F 0 "D34" H 6600 5000 20  0000 C CNN
+F 1 "blue opaque" V 6555 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6600 5050 50  0001 C CNN
+F 3 "~" V 6600 5050 50  0001 C CNN
+	1    6600 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D50
+U 1 1 60895D3C
+P 6600 5300
+F 0 "D50" H 6600 5250 20  0000 C CNN
+F 1 "blue opaque" V 6555 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6600 5300 50  0001 C CNN
+F 3 "~" V 6600 5300 50  0001 C CNN
+	1    6600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D82
+U 1 1 60895D42
+P 6600 5800
+F 0 "D82" H 6600 5750 20  0000 C CNN
+F 1 "blue opaque" V 6555 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6600 5800 50  0001 C CNN
+F 3 "~" V 6600 5800 50  0001 C CNN
+	1    6600 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D98
+U 1 1 60895D48
+P 6600 6050
+F 0 "D98" H 6600 6000 20  0000 C CNN
+F 1 "blue opaque" V 6555 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6600 6050 50  0001 C CNN
+F 3 "~" V 6600 6050 50  0001 C CNN
+	1    6600 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D114
+U 1 1 60895D4E
+P 6600 6300
+F 0 "D114" H 6600 6250 20  0000 C CNN
+F 1 "blue opaque" V 6555 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6600 6300 50  0001 C CNN
+F 3 "~" V 6600 6300 50  0001 C CNN
+	1    6600 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 6700 4450
+Wire Wire Line
+	6700 4450 6700 4700
+$Comp
+L Device-extra:LED_Small-45 D66
+U 1 1 60895D56
+P 6600 5550
+F 0 "D66" H 6600 5500 20  0000 C CNN
+F 1 "blue opaque" V 6555 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6600 5550 50  0001 C CNN
+F 3 "~" V 6600 5550 50  0001 C CNN
+	1    6600 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4950 6700 4700
+Connection ~ 6700 4700
+Wire Wire Line
+	6700 4950 6700 5200
+Connection ~ 6700 4950
+Wire Wire Line
+	6700 5200 6700 5450
+Connection ~ 6700 5200
+Wire Wire Line
+	6700 5700 6700 5450
+Connection ~ 6700 5450
+Wire Wire Line
+	6700 5700 6700 5950
+Connection ~ 6700 5700
+Wire Wire Line
+	6700 5950 6700 6200
+Connection ~ 6700 5950
+Wire Wire Line
+	6200 4650 6500 4650
+Wire Wire Line
+	6500 4900 6200 4900
+Wire Wire Line
+	6200 5150 6500 5150
+Wire Wire Line
+	6200 5400 6500 5400
+Wire Wire Line
+	6200 5650 6500 5650
+Wire Wire Line
+	6200 5900 6500 5900
+Wire Wire Line
+	6200 6150 6500 6150
+Wire Wire Line
+	6200 6400 6500 6400
+$Comp
+L Device-extra:LED_Small-45 D3
+U 1 1 608B75C6
+P 6900 4550
+F 0 "D3" H 6900 4500 20  0000 C CNN
+F 1 "blue opaque" V 6855 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6900 4550 50  0001 C CNN
+F 3 "~" V 6900 4550 50  0001 C CNN
+	1    6900 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D19
+U 1 1 608B75D3
+P 6900 4800
+F 0 "D19" H 6900 4750 20  0000 C CNN
+F 1 "blue opaque" V 6855 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6900 4800 50  0001 C CNN
+F 3 "~" V 6900 4800 50  0001 C CNN
+	1    6900 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D35
+U 1 1 608B75D9
+P 6900 5050
+F 0 "D35" H 6900 5000 20  0000 C CNN
+F 1 "blue opaque" V 6855 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6900 5050 50  0001 C CNN
+F 3 "~" V 6900 5050 50  0001 C CNN
+	1    6900 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D51
+U 1 1 608B75DF
+P 6900 5300
+F 0 "D51" H 6900 5250 20  0000 C CNN
+F 1 "blue opaque" V 6855 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6900 5300 50  0001 C CNN
+F 3 "~" V 6900 5300 50  0001 C CNN
+	1    6900 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D83
+U 1 1 608B75E5
+P 6900 5800
+F 0 "D83" H 6900 5750 20  0000 C CNN
+F 1 "blue opaque" V 6855 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6900 5800 50  0001 C CNN
+F 3 "~" V 6900 5800 50  0001 C CNN
+	1    6900 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D99
+U 1 1 608B75EB
+P 6900 6050
+F 0 "D99" H 6900 6000 20  0000 C CNN
+F 1 "blue opaque" V 6855 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6900 6050 50  0001 C CNN
+F 3 "~" V 6900 6050 50  0001 C CNN
+	1    6900 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D115
+U 1 1 608B75F1
+P 6900 6300
+F 0 "D115" H 6900 6250 20  0000 C CNN
+F 1 "blue opaque" V 6855 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6900 6300 50  0001 C CNN
+F 3 "~" V 6900 6300 50  0001 C CNN
+	1    6900 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 7000 4450
+Wire Wire Line
+	7000 4450 7000 4700
+$Comp
+L Device-extra:LED_Small-45 D67
+U 1 1 608B75F9
+P 6900 5550
+F 0 "D67" H 6900 5500 20  0000 C CNN
+F 1 "blue opaque" V 6855 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 6900 5550 50  0001 C CNN
+F 3 "~" V 6900 5550 50  0001 C CNN
+	1    6900 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4950 7000 4700
+Connection ~ 7000 4700
+Wire Wire Line
+	7000 4950 7000 5200
+Connection ~ 7000 4950
+Wire Wire Line
+	7000 5200 7000 5450
+Connection ~ 7000 5200
+Wire Wire Line
+	7000 5700 7000 5450
+Connection ~ 7000 5450
+Wire Wire Line
+	7000 5700 7000 5950
+Connection ~ 7000 5700
+Wire Wire Line
+	7000 5950 7000 6200
+Connection ~ 7000 5950
+Wire Wire Line
+	6500 4650 6800 4650
+Wire Wire Line
+	6800 4900 6500 4900
+Wire Wire Line
+	6500 5150 6800 5150
+Wire Wire Line
+	6500 5400 6800 5400
+Wire Wire Line
+	6500 5650 6800 5650
+Wire Wire Line
+	6500 5900 6800 5900
+Wire Wire Line
+	6500 6150 6800 6150
+Wire Wire Line
+	6500 6400 6800 6400
+$Comp
+L Device-extra:LED_Small-45 D4
+U 1 1 608BDDA1
+P 7200 4550
+F 0 "D4" H 7200 4500 20  0000 C CNN
+F 1 "blue opaque" V 7155 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7200 4550 50  0001 C CNN
+F 3 "~" V 7200 4550 50  0001 C CNN
+	1    7200 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D20
+U 1 1 608BDDAE
+P 7200 4800
+F 0 "D20" H 7200 4750 20  0000 C CNN
+F 1 "blue opaque" V 7155 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7200 4800 50  0001 C CNN
+F 3 "~" V 7200 4800 50  0001 C CNN
+	1    7200 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D36
+U 1 1 608BDDB4
+P 7200 5050
+F 0 "D36" H 7200 5000 20  0000 C CNN
+F 1 "blue opaque" V 7155 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7200 5050 50  0001 C CNN
+F 3 "~" V 7200 5050 50  0001 C CNN
+	1    7200 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D52
+U 1 1 608BDDBA
+P 7200 5300
+F 0 "D52" H 7200 5250 20  0000 C CNN
+F 1 "blue opaque" V 7155 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7200 5300 50  0001 C CNN
+F 3 "~" V 7200 5300 50  0001 C CNN
+	1    7200 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D84
+U 1 1 608BDDC0
+P 7200 5800
+F 0 "D84" H 7200 5750 20  0000 C CNN
+F 1 "blue opaque" V 7155 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7200 5800 50  0001 C CNN
+F 3 "~" V 7200 5800 50  0001 C CNN
+	1    7200 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D100
+U 1 1 608BDDC6
+P 7200 6050
+F 0 "D100" H 7200 6000 20  0000 C CNN
+F 1 "blue opaque" V 7155 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7200 6050 50  0001 C CNN
+F 3 "~" V 7200 6050 50  0001 C CNN
+	1    7200 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D116
+U 1 1 608BDDCC
+P 7200 6300
+F 0 "D116" H 7200 6250 20  0000 C CNN
+F 1 "blue opaque" V 7155 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7200 6300 50  0001 C CNN
+F 3 "~" V 7200 6300 50  0001 C CNN
+	1    7200 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 7300 4450
+Wire Wire Line
+	7300 4450 7300 4700
+$Comp
+L Device-extra:LED_Small-45 D68
+U 1 1 608BDDD4
+P 7200 5550
+F 0 "D68" H 7200 5500 20  0000 C CNN
+F 1 "blue opaque" V 7155 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7200 5550 50  0001 C CNN
+F 3 "~" V 7200 5550 50  0001 C CNN
+	1    7200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4950 7300 4700
+Connection ~ 7300 4700
+Wire Wire Line
+	7300 4950 7300 5200
+Connection ~ 7300 4950
+Wire Wire Line
+	7300 5200 7300 5450
+Connection ~ 7300 5200
+Wire Wire Line
+	7300 5700 7300 5450
+Connection ~ 7300 5450
+Wire Wire Line
+	7300 5700 7300 5950
+Connection ~ 7300 5700
+Wire Wire Line
+	7300 5950 7300 6200
+Connection ~ 7300 5950
+Wire Wire Line
+	6800 4650 7100 4650
+Wire Wire Line
+	7100 4900 6800 4900
+Wire Wire Line
+	6800 5150 7100 5150
+Wire Wire Line
+	6800 5400 7100 5400
+Wire Wire Line
+	6800 5650 7100 5650
+Wire Wire Line
+	6800 5900 7100 5900
+Wire Wire Line
+	6800 6150 7100 6150
+Wire Wire Line
+	6800 6400 7100 6400
+$Comp
+L Device-extra:LED_Small-45 D5
+U 1 1 608C4BC7
+P 7500 4550
+F 0 "D5" H 7500 4500 20  0000 C CNN
+F 1 "blue opaque" V 7455 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7500 4550 50  0001 C CNN
+F 3 "~" V 7500 4550 50  0001 C CNN
+	1    7500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D21
+U 1 1 608C4BD4
+P 7500 4800
+F 0 "D21" H 7500 4750 20  0000 C CNN
+F 1 "blue opaque" V 7455 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7500 4800 50  0001 C CNN
+F 3 "~" V 7500 4800 50  0001 C CNN
+	1    7500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D37
+U 1 1 608C4BDA
+P 7500 5050
+F 0 "D37" H 7500 5000 20  0000 C CNN
+F 1 "blue opaque" V 7455 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7500 5050 50  0001 C CNN
+F 3 "~" V 7500 5050 50  0001 C CNN
+	1    7500 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D53
+U 1 1 608C4BE0
+P 7500 5300
+F 0 "D53" H 7500 5250 20  0000 C CNN
+F 1 "blue opaque" V 7455 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7500 5300 50  0001 C CNN
+F 3 "~" V 7500 5300 50  0001 C CNN
+	1    7500 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D85
+U 1 1 608C4BE6
+P 7500 5800
+F 0 "D85" H 7500 5750 20  0000 C CNN
+F 1 "blue opaque" V 7455 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7500 5800 50  0001 C CNN
+F 3 "~" V 7500 5800 50  0001 C CNN
+	1    7500 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D101
+U 1 1 608C4BEC
+P 7500 6050
+F 0 "D101" H 7500 6000 20  0000 C CNN
+F 1 "blue opaque" V 7455 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7500 6050 50  0001 C CNN
+F 3 "~" V 7500 6050 50  0001 C CNN
+	1    7500 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D117
+U 1 1 608C4BF2
+P 7500 6300
+F 0 "D117" H 7500 6250 20  0000 C CNN
+F 1 "blue opaque" V 7455 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7500 6300 50  0001 C CNN
+F 3 "~" V 7500 6300 50  0001 C CNN
+	1    7500 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 7600 4450
+Wire Wire Line
+	7600 4450 7600 4700
+$Comp
+L Device-extra:LED_Small-45 D69
+U 1 1 608C4BFA
+P 7500 5550
+F 0 "D69" H 7500 5500 20  0000 C CNN
+F 1 "blue opaque" V 7455 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7500 5550 50  0001 C CNN
+F 3 "~" V 7500 5550 50  0001 C CNN
+	1    7500 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4950 7600 4700
+Connection ~ 7600 4700
+Wire Wire Line
+	7600 4950 7600 5200
+Connection ~ 7600 4950
+Wire Wire Line
+	7600 5200 7600 5450
+Connection ~ 7600 5200
+Wire Wire Line
+	7600 5700 7600 5450
+Connection ~ 7600 5450
+Wire Wire Line
+	7600 5700 7600 5950
+Connection ~ 7600 5700
+Wire Wire Line
+	7600 5950 7600 6200
+Connection ~ 7600 5950
+Wire Wire Line
+	7100 4650 7400 4650
+Wire Wire Line
+	7400 4900 7100 4900
+Wire Wire Line
+	7100 5150 7400 5150
+Wire Wire Line
+	7100 5400 7400 5400
+Wire Wire Line
+	7100 5650 7400 5650
+Wire Wire Line
+	7100 5900 7400 5900
+Wire Wire Line
+	7100 6150 7400 6150
+Wire Wire Line
+	7100 6400 7400 6400
+$Comp
+L Device-extra:LED_Small-45 D6
+U 1 1 608CB918
+P 7800 4550
+F 0 "D6" H 7800 4500 20  0000 C CNN
+F 1 "blue opaque" V 7755 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7800 4550 50  0001 C CNN
+F 3 "~" V 7800 4550 50  0001 C CNN
+	1    7800 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D22
+U 1 1 608CB925
+P 7800 4800
+F 0 "D22" H 7800 4750 20  0000 C CNN
+F 1 "blue opaque" V 7755 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7800 4800 50  0001 C CNN
+F 3 "~" V 7800 4800 50  0001 C CNN
+	1    7800 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D38
+U 1 1 608CB92B
+P 7800 5050
+F 0 "D38" H 7800 5000 20  0000 C CNN
+F 1 "blue opaque" V 7755 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7800 5050 50  0001 C CNN
+F 3 "~" V 7800 5050 50  0001 C CNN
+	1    7800 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D54
+U 1 1 608CB931
+P 7800 5300
+F 0 "D54" H 7800 5250 20  0000 C CNN
+F 1 "blue opaque" V 7755 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7800 5300 50  0001 C CNN
+F 3 "~" V 7800 5300 50  0001 C CNN
+	1    7800 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D86
+U 1 1 608CB937
+P 7800 5800
+F 0 "D86" H 7800 5750 20  0000 C CNN
+F 1 "blue opaque" V 7755 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7800 5800 50  0001 C CNN
+F 3 "~" V 7800 5800 50  0001 C CNN
+	1    7800 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D102
+U 1 1 608CB93D
+P 7800 6050
+F 0 "D102" H 7800 6000 20  0000 C CNN
+F 1 "blue opaque" V 7755 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7800 6050 50  0001 C CNN
+F 3 "~" V 7800 6050 50  0001 C CNN
+	1    7800 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D118
+U 1 1 608CB943
+P 7800 6300
+F 0 "D118" H 7800 6250 20  0000 C CNN
+F 1 "blue opaque" V 7755 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7800 6300 50  0001 C CNN
+F 3 "~" V 7800 6300 50  0001 C CNN
+	1    7800 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 7900 4450
+Wire Wire Line
+	7900 4450 7900 4700
+$Comp
+L Device-extra:LED_Small-45 D70
+U 1 1 608CB94B
+P 7800 5550
+F 0 "D70" H 7800 5500 20  0000 C CNN
+F 1 "blue opaque" V 7755 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 7800 5550 50  0001 C CNN
+F 3 "~" V 7800 5550 50  0001 C CNN
+	1    7800 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4950 7900 4700
+Connection ~ 7900 4700
+Wire Wire Line
+	7900 4950 7900 5200
+Connection ~ 7900 4950
+Wire Wire Line
+	7900 5200 7900 5450
+Connection ~ 7900 5200
+Wire Wire Line
+	7900 5700 7900 5450
+Connection ~ 7900 5450
+Wire Wire Line
+	7900 5700 7900 5950
+Connection ~ 7900 5700
+Wire Wire Line
+	7900 5950 7900 6200
+Connection ~ 7900 5950
+Wire Wire Line
+	7400 4650 7700 4650
+Wire Wire Line
+	7700 4900 7400 4900
+Wire Wire Line
+	7400 5150 7700 5150
+Wire Wire Line
+	7400 5400 7700 5400
+Wire Wire Line
+	7400 5650 7700 5650
+Wire Wire Line
+	7400 5900 7700 5900
+Wire Wire Line
+	7400 6150 7700 6150
+Wire Wire Line
+	7400 6400 7700 6400
+$Comp
+L Device-extra:LED_Small-45 D7
+U 1 1 608D4318
+P 8100 4550
+F 0 "D7" H 8100 4500 20  0000 C CNN
+F 1 "blue opaque" V 8055 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8100 4550 50  0001 C CNN
+F 3 "~" V 8100 4550 50  0001 C CNN
+	1    8100 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D23
+U 1 1 608D4325
+P 8100 4800
+F 0 "D23" H 8100 4750 20  0000 C CNN
+F 1 "blue opaque" V 8055 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8100 4800 50  0001 C CNN
+F 3 "~" V 8100 4800 50  0001 C CNN
+	1    8100 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D39
+U 1 1 608D432B
+P 8100 5050
+F 0 "D39" H 8100 5000 20  0000 C CNN
+F 1 "blue opaque" V 8055 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8100 5050 50  0001 C CNN
+F 3 "~" V 8100 5050 50  0001 C CNN
+	1    8100 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D55
+U 1 1 608D4331
+P 8100 5300
+F 0 "D55" H 8100 5250 20  0000 C CNN
+F 1 "blue opaque" V 8055 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8100 5300 50  0001 C CNN
+F 3 "~" V 8100 5300 50  0001 C CNN
+	1    8100 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D87
+U 1 1 608D4337
+P 8100 5800
+F 0 "D87" H 8100 5750 20  0000 C CNN
+F 1 "blue opaque" V 8055 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8100 5800 50  0001 C CNN
+F 3 "~" V 8100 5800 50  0001 C CNN
+	1    8100 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D103
+U 1 1 608D433D
+P 8100 6050
+F 0 "D103" H 8100 6000 20  0000 C CNN
+F 1 "blue opaque" V 8055 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8100 6050 50  0001 C CNN
+F 3 "~" V 8100 6050 50  0001 C CNN
+	1    8100 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D119
+U 1 1 608D4343
+P 8100 6300
+F 0 "D119" H 8100 6250 20  0000 C CNN
+F 1 "blue opaque" V 8055 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8100 6300 50  0001 C CNN
+F 3 "~" V 8100 6300 50  0001 C CNN
+	1    8100 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 8200 4450
+Wire Wire Line
+	8200 4450 8200 4700
+$Comp
+L Device-extra:LED_Small-45 D71
+U 1 1 608D434B
+P 8100 5550
+F 0 "D71" H 8100 5500 20  0000 C CNN
+F 1 "blue opaque" V 8055 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8100 5550 50  0001 C CNN
+F 3 "~" V 8100 5550 50  0001 C CNN
+	1    8100 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 4950 8200 4700
+Connection ~ 8200 4700
+Wire Wire Line
+	8200 4950 8200 5200
+Connection ~ 8200 4950
+Wire Wire Line
+	8200 5200 8200 5450
+Connection ~ 8200 5200
+Wire Wire Line
+	8200 5700 8200 5450
+Connection ~ 8200 5450
+Wire Wire Line
+	8200 5700 8200 5950
+Connection ~ 8200 5700
+Wire Wire Line
+	8200 5950 8200 6200
+Connection ~ 8200 5950
+Wire Wire Line
+	7700 4650 8000 4650
+Wire Wire Line
+	8000 4900 7700 4900
+Wire Wire Line
+	7700 5150 8000 5150
+Wire Wire Line
+	7700 5400 8000 5400
+Wire Wire Line
+	7700 5650 8000 5650
+Wire Wire Line
+	7700 5900 8000 5900
+Wire Wire Line
+	7700 6150 8000 6150
+Wire Wire Line
+	7700 6400 8000 6400
+$Comp
+L Device-extra:LED_Small-45 D8
+U 1 1 608DD7AF
+P 8400 4550
+F 0 "D8" H 8400 4500 20  0000 C CNN
+F 1 "blue opaque" V 8355 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8400 4550 50  0001 C CNN
+F 3 "~" V 8400 4550 50  0001 C CNN
+	1    8400 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D24
+U 1 1 608DD7BC
+P 8400 4800
+F 0 "D24" H 8400 4750 20  0000 C CNN
+F 1 "blue opaque" V 8355 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8400 4800 50  0001 C CNN
+F 3 "~" V 8400 4800 50  0001 C CNN
+	1    8400 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D40
+U 1 1 608DD7C2
+P 8400 5050
+F 0 "D40" H 8400 5000 20  0000 C CNN
+F 1 "blue opaque" V 8355 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8400 5050 50  0001 C CNN
+F 3 "~" V 8400 5050 50  0001 C CNN
+	1    8400 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D56
+U 1 1 608DD7C8
+P 8400 5300
+F 0 "D56" H 8400 5250 20  0000 C CNN
+F 1 "blue opaque" V 8355 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8400 5300 50  0001 C CNN
+F 3 "~" V 8400 5300 50  0001 C CNN
+	1    8400 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D88
+U 1 1 608DD7CE
+P 8400 5800
+F 0 "D88" H 8400 5750 20  0000 C CNN
+F 1 "blue opaque" V 8355 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8400 5800 50  0001 C CNN
+F 3 "~" V 8400 5800 50  0001 C CNN
+	1    8400 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D104
+U 1 1 608DD7D4
+P 8400 6050
+F 0 "D104" H 8400 6000 20  0000 C CNN
+F 1 "blue opaque" V 8355 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8400 6050 50  0001 C CNN
+F 3 "~" V 8400 6050 50  0001 C CNN
+	1    8400 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D120
+U 1 1 608DD7DA
+P 8400 6300
+F 0 "D120" H 8400 6250 20  0000 C CNN
+F 1 "blue opaque" V 8355 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8400 6300 50  0001 C CNN
+F 3 "~" V 8400 6300 50  0001 C CNN
+	1    8400 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 8500 4450
+Wire Wire Line
+	8500 4450 8500 4700
+$Comp
+L Device-extra:LED_Small-45 D72
+U 1 1 608DD7E2
+P 8400 5550
+F 0 "D72" H 8400 5500 20  0000 C CNN
+F 1 "blue opaque" V 8355 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8400 5550 50  0001 C CNN
+F 3 "~" V 8400 5550 50  0001 C CNN
+	1    8400 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 4950 8500 4700
+Connection ~ 8500 4700
+Wire Wire Line
+	8500 4950 8500 5200
+Connection ~ 8500 4950
+Wire Wire Line
+	8500 5200 8500 5450
+Connection ~ 8500 5200
+Wire Wire Line
+	8500 5700 8500 5450
+Connection ~ 8500 5450
+Wire Wire Line
+	8500 5700 8500 5950
+Connection ~ 8500 5700
+Wire Wire Line
+	8500 5950 8500 6200
+Connection ~ 8500 5950
+Wire Wire Line
+	8000 4650 8300 4650
+Wire Wire Line
+	8300 4900 8000 4900
+Wire Wire Line
+	8000 5150 8300 5150
+Wire Wire Line
+	8000 5400 8300 5400
+Wire Wire Line
+	8000 5650 8300 5650
+Wire Wire Line
+	8000 5900 8300 5900
+Wire Wire Line
+	8000 6150 8300 6150
+Wire Wire Line
+	8000 6400 8300 6400
+$Comp
+L Device-extra:LED_Small-45 D9
+U 1 1 608E8EB5
+P 8700 4550
+F 0 "D9" H 8700 4500 20  0000 C CNN
+F 1 "blue opaque" V 8655 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8700 4550 50  0001 C CNN
+F 3 "~" V 8700 4550 50  0001 C CNN
+	1    8700 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D25
+U 1 1 608E8EC2
+P 8700 4800
+F 0 "D25" H 8700 4750 20  0000 C CNN
+F 1 "blue opaque" V 8655 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8700 4800 50  0001 C CNN
+F 3 "~" V 8700 4800 50  0001 C CNN
+	1    8700 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D41
+U 1 1 608E8EC8
+P 8700 5050
+F 0 "D41" H 8700 5000 20  0000 C CNN
+F 1 "blue opaque" V 8655 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8700 5050 50  0001 C CNN
+F 3 "~" V 8700 5050 50  0001 C CNN
+	1    8700 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D57
+U 1 1 608E8ECE
+P 8700 5300
+F 0 "D57" H 8700 5250 20  0000 C CNN
+F 1 "blue opaque" V 8655 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8700 5300 50  0001 C CNN
+F 3 "~" V 8700 5300 50  0001 C CNN
+	1    8700 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D89
+U 1 1 608E8ED4
+P 8700 5800
+F 0 "D89" H 8700 5750 20  0000 C CNN
+F 1 "blue opaque" V 8655 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8700 5800 50  0001 C CNN
+F 3 "~" V 8700 5800 50  0001 C CNN
+	1    8700 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D105
+U 1 1 608E8EDA
+P 8700 6050
+F 0 "D105" H 8700 6000 20  0000 C CNN
+F 1 "blue opaque" V 8655 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8700 6050 50  0001 C CNN
+F 3 "~" V 8700 6050 50  0001 C CNN
+	1    8700 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D121
+U 1 1 608E8EE0
+P 8700 6300
+F 0 "D121" H 8700 6250 20  0000 C CNN
+F 1 "blue opaque" V 8655 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8700 6300 50  0001 C CNN
+F 3 "~" V 8700 6300 50  0001 C CNN
+	1    8700 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 8800 4450
+Wire Wire Line
+	8800 4450 8800 4700
+$Comp
+L Device-extra:LED_Small-45 D73
+U 1 1 608E8EE8
+P 8700 5550
+F 0 "D73" H 8700 5500 20  0000 C CNN
+F 1 "blue opaque" V 8655 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8700 5550 50  0001 C CNN
+F 3 "~" V 8700 5550 50  0001 C CNN
+	1    8700 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 4950 8800 4700
+Connection ~ 8800 4700
+Wire Wire Line
+	8800 4950 8800 5200
+Connection ~ 8800 4950
+Wire Wire Line
+	8800 5200 8800 5450
+Connection ~ 8800 5200
+Wire Wire Line
+	8800 5700 8800 5450
+Connection ~ 8800 5450
+Wire Wire Line
+	8800 5700 8800 5950
+Connection ~ 8800 5700
+Wire Wire Line
+	8800 5950 8800 6200
+Connection ~ 8800 5950
+$Comp
+L Device-extra:LED_Small-45 D10
+U 1 1 608F57CA
+P 8950 4550
+F 0 "D10" H 8950 4500 20  0000 C CNN
+F 1 "blue opaque" V 8905 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8950 4550 50  0001 C CNN
+F 3 "~" V 8950 4550 50  0001 C CNN
+	1    8950 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D26
+U 1 1 608F57D7
+P 8950 4800
+F 0 "D26" H 8950 4750 20  0000 C CNN
+F 1 "blue opaque" V 8905 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8950 4800 50  0001 C CNN
+F 3 "~" V 8950 4800 50  0001 C CNN
+	1    8950 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D42
+U 1 1 608F57DD
+P 8950 5050
+F 0 "D42" H 8950 5000 20  0000 C CNN
+F 1 "blue opaque" V 8905 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8950 5050 50  0001 C CNN
+F 3 "~" V 8950 5050 50  0001 C CNN
+	1    8950 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D58
+U 1 1 608F57E3
+P 8950 5300
+F 0 "D58" H 8950 5250 20  0000 C CNN
+F 1 "blue opaque" V 8905 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8950 5300 50  0001 C CNN
+F 3 "~" V 8950 5300 50  0001 C CNN
+	1    8950 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D90
+U 1 1 608F57E9
+P 8950 5800
+F 0 "D90" H 8950 5750 20  0000 C CNN
+F 1 "blue opaque" V 8905 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8950 5800 50  0001 C CNN
+F 3 "~" V 8950 5800 50  0001 C CNN
+	1    8950 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D106
+U 1 1 608F57EF
+P 8950 6050
+F 0 "D106" H 8950 6000 20  0000 C CNN
+F 1 "blue opaque" V 8905 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8950 6050 50  0001 C CNN
+F 3 "~" V 8950 6050 50  0001 C CNN
+	1    8950 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D122
+U 1 1 608F57F5
+P 8950 6300
+F 0 "D122" H 8950 6250 20  0000 C CNN
+F 1 "blue opaque" V 8905 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8950 6300 50  0001 C CNN
+F 3 "~" V 8950 6300 50  0001 C CNN
+	1    8950 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 9050 4450
+Wire Wire Line
+	9050 4450 9050 4700
+$Comp
+L Device-extra:LED_Small-45 D74
+U 1 1 608F57FD
+P 8950 5550
+F 0 "D74" H 8950 5500 20  0000 C CNN
+F 1 "blue opaque" V 8905 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 8950 5550 50  0001 C CNN
+F 3 "~" V 8950 5550 50  0001 C CNN
+	1    8950 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 4950 9050 4700
+Connection ~ 9050 4700
+Wire Wire Line
+	9050 4950 9050 5200
+Connection ~ 9050 4950
+Wire Wire Line
+	9050 5200 9050 5450
+Connection ~ 9050 5200
+Wire Wire Line
+	9050 5700 9050 5450
+Connection ~ 9050 5450
+Wire Wire Line
+	9050 5700 9050 5950
+Connection ~ 9050 5700
+Wire Wire Line
+	9050 5950 9050 6200
+Connection ~ 9050 5950
+Wire Wire Line
+	8300 4650 8600 4650
+Wire Wire Line
+	8300 4900 8600 4900
+Wire Wire Line
+	8300 5150 8600 5150
+Wire Wire Line
+	8300 5400 8600 5400
+Wire Wire Line
+	8300 5650 8600 5650
+Wire Wire Line
+	8300 5900 8600 5900
+Wire Wire Line
+	8300 6150 8600 6150
+Wire Wire Line
+	8300 6400 8600 6400
+$Comp
+L Device-extra:LED_Small-45 D11
+U 1 1 60903F36
+P 9250 4550
+F 0 "D11" H 9250 4500 20  0000 C CNN
+F 1 "blue opaque" V 9205 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9250 4550 50  0001 C CNN
+F 3 "~" V 9250 4550 50  0001 C CNN
+	1    9250 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D27
+U 1 1 60903F43
+P 9250 4800
+F 0 "D27" H 9250 4750 20  0000 C CNN
+F 1 "blue opaque" V 9205 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9250 4800 50  0001 C CNN
+F 3 "~" V 9250 4800 50  0001 C CNN
+	1    9250 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D43
+U 1 1 60903F49
+P 9250 5050
+F 0 "D43" H 9250 5000 20  0000 C CNN
+F 1 "blue opaque" V 9205 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9250 5050 50  0001 C CNN
+F 3 "~" V 9250 5050 50  0001 C CNN
+	1    9250 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D59
+U 1 1 60903F4F
+P 9250 5300
+F 0 "D59" H 9250 5250 20  0000 C CNN
+F 1 "blue opaque" V 9205 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9250 5300 50  0001 C CNN
+F 3 "~" V 9250 5300 50  0001 C CNN
+	1    9250 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D91
+U 1 1 60903F55
+P 9250 5800
+F 0 "D91" H 9250 5750 20  0000 C CNN
+F 1 "blue opaque" V 9205 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9250 5800 50  0001 C CNN
+F 3 "~" V 9250 5800 50  0001 C CNN
+	1    9250 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D107
+U 1 1 60903F5B
+P 9250 6050
+F 0 "D107" H 9250 6000 20  0000 C CNN
+F 1 "blue opaque" V 9205 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9250 6050 50  0001 C CNN
+F 3 "~" V 9250 6050 50  0001 C CNN
+	1    9250 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D123
+U 1 1 60903F61
+P 9250 6300
+F 0 "D123" H 9250 6250 20  0000 C CNN
+F 1 "blue opaque" V 9205 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9250 6300 50  0001 C CNN
+F 3 "~" V 9250 6300 50  0001 C CNN
+	1    9250 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 9350 4450
+Wire Wire Line
+	9350 4450 9350 4700
+$Comp
+L Device-extra:LED_Small-45 D75
+U 1 1 60903F69
+P 9250 5550
+F 0 "D75" H 9250 5500 20  0000 C CNN
+F 1 "blue opaque" V 9205 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9250 5550 50  0001 C CNN
+F 3 "~" V 9250 5550 50  0001 C CNN
+	1    9250 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 4950 9350 4700
+Connection ~ 9350 4700
+Wire Wire Line
+	9350 4950 9350 5200
+Connection ~ 9350 4950
+Wire Wire Line
+	9350 5200 9350 5450
+Connection ~ 9350 5200
+Wire Wire Line
+	9350 5700 9350 5450
+Connection ~ 9350 5450
+Wire Wire Line
+	9350 5700 9350 5950
+Connection ~ 9350 5700
+Wire Wire Line
+	9350 5950 9350 6200
+Connection ~ 9350 5950
+Wire Wire Line
+	8850 4650 9150 4650
+Wire Wire Line
+	9150 4900 8850 4900
+Wire Wire Line
+	8850 5150 9150 5150
+Wire Wire Line
+	8850 5400 9150 5400
+Wire Wire Line
+	8850 5650 9150 5650
+Wire Wire Line
+	8850 5900 9150 5900
+Wire Wire Line
+	8850 6150 9150 6150
+Wire Wire Line
+	8850 6400 9150 6400
+$Comp
+L Device-extra:LED_Small-45 D12
+U 1 1 60912905
+P 9550 4550
+F 0 "D12" H 9550 4500 20  0000 C CNN
+F 1 "blue opaque" V 9505 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9550 4550 50  0001 C CNN
+F 3 "~" V 9550 4550 50  0001 C CNN
+	1    9550 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D28
+U 1 1 60912912
+P 9550 4800
+F 0 "D28" H 9550 4750 20  0000 C CNN
+F 1 "blue opaque" V 9505 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9550 4800 50  0001 C CNN
+F 3 "~" V 9550 4800 50  0001 C CNN
+	1    9550 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D44
+U 1 1 60912918
+P 9550 5050
+F 0 "D44" H 9550 5000 20  0000 C CNN
+F 1 "blue opaque" V 9505 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9550 5050 50  0001 C CNN
+F 3 "~" V 9550 5050 50  0001 C CNN
+	1    9550 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D60
+U 1 1 6091291E
+P 9550 5300
+F 0 "D60" H 9550 5250 20  0000 C CNN
+F 1 "blue opaque" V 9505 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9550 5300 50  0001 C CNN
+F 3 "~" V 9550 5300 50  0001 C CNN
+	1    9550 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D92
+U 1 1 60912924
+P 9550 5800
+F 0 "D92" H 9550 5750 20  0000 C CNN
+F 1 "blue opaque" V 9505 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9550 5800 50  0001 C CNN
+F 3 "~" V 9550 5800 50  0001 C CNN
+	1    9550 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D108
+U 1 1 6091292A
+P 9550 6050
+F 0 "D108" H 9550 6000 20  0000 C CNN
+F 1 "blue opaque" V 9505 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9550 6050 50  0001 C CNN
+F 3 "~" V 9550 6050 50  0001 C CNN
+	1    9550 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D124
+U 1 1 60912930
+P 9550 6300
+F 0 "D124" H 9550 6250 20  0000 C CNN
+F 1 "blue opaque" V 9505 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9550 6300 50  0001 C CNN
+F 3 "~" V 9550 6300 50  0001 C CNN
+	1    9550 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 9650 4450
+Wire Wire Line
+	9650 4450 9650 4700
+$Comp
+L Device-extra:LED_Small-45 D76
+U 1 1 60912938
+P 9550 5550
+F 0 "D76" H 9550 5500 20  0000 C CNN
+F 1 "blue opaque" V 9505 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9550 5550 50  0001 C CNN
+F 3 "~" V 9550 5550 50  0001 C CNN
+	1    9550 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 4950 9650 4700
+Connection ~ 9650 4700
+Wire Wire Line
+	9650 4950 9650 5200
+Connection ~ 9650 4950
+Wire Wire Line
+	9650 5200 9650 5450
+Connection ~ 9650 5200
+Wire Wire Line
+	9650 5700 9650 5450
+Connection ~ 9650 5450
+Wire Wire Line
+	9650 5700 9650 5950
+Connection ~ 9650 5700
+Wire Wire Line
+	9650 5950 9650 6200
+Connection ~ 9650 5950
+Wire Wire Line
+	9150 4650 9450 4650
+Wire Wire Line
+	9450 4900 9150 4900
+Wire Wire Line
+	9150 5150 9450 5150
+Wire Wire Line
+	9150 5400 9450 5400
+Wire Wire Line
+	9150 5650 9450 5650
+Wire Wire Line
+	9150 5900 9450 5900
+Wire Wire Line
+	9150 6150 9450 6150
+Wire Wire Line
+	9150 6400 9450 6400
+$Comp
+L Device-extra:LED_Small-45 D13
+U 1 1 609229C3
+P 9850 4550
+F 0 "D13" H 9850 4500 20  0000 C CNN
+F 1 "blue opaque" V 9805 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9850 4550 50  0001 C CNN
+F 3 "~" V 9850 4550 50  0001 C CNN
+	1    9850 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D29
+U 1 1 609229D0
+P 9850 4800
+F 0 "D29" H 9850 4750 20  0000 C CNN
+F 1 "blue opaque" V 9805 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9850 4800 50  0001 C CNN
+F 3 "~" V 9850 4800 50  0001 C CNN
+	1    9850 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D45
+U 1 1 609229D6
+P 9850 5050
+F 0 "D45" H 9850 5000 20  0000 C CNN
+F 1 "blue opaque" V 9805 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9850 5050 50  0001 C CNN
+F 3 "~" V 9850 5050 50  0001 C CNN
+	1    9850 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D61
+U 1 1 609229DC
+P 9850 5300
+F 0 "D61" H 9850 5250 20  0000 C CNN
+F 1 "blue opaque" V 9805 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9850 5300 50  0001 C CNN
+F 3 "~" V 9850 5300 50  0001 C CNN
+	1    9850 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D93
+U 1 1 609229E2
+P 9850 5800
+F 0 "D93" H 9850 5750 20  0000 C CNN
+F 1 "blue opaque" V 9805 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9850 5800 50  0001 C CNN
+F 3 "~" V 9850 5800 50  0001 C CNN
+	1    9850 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D109
+U 1 1 609229E8
+P 9850 6050
+F 0 "D109" H 9850 6000 20  0000 C CNN
+F 1 "blue opaque" V 9805 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9850 6050 50  0001 C CNN
+F 3 "~" V 9850 6050 50  0001 C CNN
+	1    9850 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D125
+U 1 1 609229EE
+P 9850 6300
+F 0 "D125" H 9850 6250 20  0000 C CNN
+F 1 "blue opaque" V 9805 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9850 6300 50  0001 C CNN
+F 3 "~" V 9850 6300 50  0001 C CNN
+	1    9850 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 9950 4450
+Wire Wire Line
+	9950 4450 9950 4700
+$Comp
+L Device-extra:LED_Small-45 D77
+U 1 1 609229F6
+P 9850 5550
+F 0 "D77" H 9850 5500 20  0000 C CNN
+F 1 "blue opaque" V 9805 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 9850 5550 50  0001 C CNN
+F 3 "~" V 9850 5550 50  0001 C CNN
+	1    9850 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 4950 9950 4700
+Connection ~ 9950 4700
+Wire Wire Line
+	9950 4950 9950 5200
+Connection ~ 9950 4950
+Wire Wire Line
+	9950 5200 9950 5450
+Connection ~ 9950 5200
+Wire Wire Line
+	9950 5700 9950 5450
+Connection ~ 9950 5450
+Wire Wire Line
+	9950 5700 9950 5950
+Connection ~ 9950 5700
+Wire Wire Line
+	9950 5950 9950 6200
+Connection ~ 9950 5950
+Wire Wire Line
+	9450 4650 9750 4650
+Wire Wire Line
+	9750 4900 9450 4900
+Wire Wire Line
+	9450 5150 9750 5150
+Wire Wire Line
+	9450 5400 9750 5400
+Wire Wire Line
+	9450 5650 9750 5650
+Wire Wire Line
+	9450 5900 9750 5900
+Wire Wire Line
+	9450 6150 9750 6150
+Wire Wire Line
+	9450 6400 9750 6400
+$Comp
+L Device-extra:LED_Small-45 D14
+U 1 1 60933FC0
+P 10150 4550
+F 0 "D14" H 10150 4500 20  0000 C CNN
+F 1 "blue opaque" V 10105 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10150 4550 50  0001 C CNN
+F 3 "~" V 10150 4550 50  0001 C CNN
+	1    10150 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D30
+U 1 1 60933FCD
+P 10150 4800
+F 0 "D30" H 10150 4750 20  0000 C CNN
+F 1 "blue opaque" V 10105 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10150 4800 50  0001 C CNN
+F 3 "~" V 10150 4800 50  0001 C CNN
+	1    10150 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D46
+U 1 1 60933FD3
+P 10150 5050
+F 0 "D46" H 10150 5000 20  0000 C CNN
+F 1 "blue opaque" V 10105 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10150 5050 50  0001 C CNN
+F 3 "~" V 10150 5050 50  0001 C CNN
+	1    10150 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D62
+U 1 1 60933FD9
+P 10150 5300
+F 0 "D62" H 10150 5250 20  0000 C CNN
+F 1 "blue opaque" V 10105 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10150 5300 50  0001 C CNN
+F 3 "~" V 10150 5300 50  0001 C CNN
+	1    10150 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D94
+U 1 1 60933FDF
+P 10150 5800
+F 0 "D94" H 10150 5750 20  0000 C CNN
+F 1 "blue opaque" V 10105 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10150 5800 50  0001 C CNN
+F 3 "~" V 10150 5800 50  0001 C CNN
+	1    10150 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D110
+U 1 1 60933FE5
+P 10150 6050
+F 0 "D110" H 10150 6000 20  0000 C CNN
+F 1 "blue opaque" V 10105 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10150 6050 50  0001 C CNN
+F 3 "~" V 10150 6050 50  0001 C CNN
+	1    10150 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D126
+U 1 1 60933FEB
+P 10150 6300
+F 0 "D126" H 10150 6250 20  0000 C CNN
+F 1 "blue opaque" V 10105 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10150 6300 50  0001 C CNN
+F 3 "~" V 10150 6300 50  0001 C CNN
+	1    10150 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 10250 4450
+Wire Wire Line
+	10250 4450 10250 4700
+$Comp
+L Device-extra:LED_Small-45 D78
+U 1 1 60933FF3
+P 10150 5550
+F 0 "D78" H 10150 5500 20  0000 C CNN
+F 1 "blue opaque" V 10105 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10150 5550 50  0001 C CNN
+F 3 "~" V 10150 5550 50  0001 C CNN
+	1    10150 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 4950 10250 4700
+Connection ~ 10250 4700
+Wire Wire Line
+	10250 4950 10250 5200
+Connection ~ 10250 4950
+Wire Wire Line
+	10250 5200 10250 5450
+Connection ~ 10250 5200
+Wire Wire Line
+	10250 5700 10250 5450
+Connection ~ 10250 5450
+Wire Wire Line
+	10250 5700 10250 5950
+Connection ~ 10250 5700
+Wire Wire Line
+	10250 5950 10250 6200
+Connection ~ 10250 5950
+Wire Wire Line
+	9750 4650 10050 4650
+Wire Wire Line
+	10050 4900 9750 4900
+Wire Wire Line
+	9750 5150 10050 5150
+Wire Wire Line
+	9750 5400 10050 5400
+Wire Wire Line
+	9750 5650 10050 5650
+Wire Wire Line
+	9750 5900 10050 5900
+Wire Wire Line
+	9750 6150 10050 6150
+Wire Wire Line
+	9750 6400 10050 6400
+$Comp
+L Device-extra:LED_Small-45 D15
+U 1 1 60947450
+P 10450 4550
+F 0 "D15" H 10450 4500 20  0000 C CNN
+F 1 "blue opaque" V 10405 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10450 4550 50  0001 C CNN
+F 3 "~" V 10450 4550 50  0001 C CNN
+	1    10450 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D31
+U 1 1 6094745D
+P 10450 4800
+F 0 "D31" H 10450 4750 20  0000 C CNN
+F 1 "blue opaque" V 10405 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10450 4800 50  0001 C CNN
+F 3 "~" V 10450 4800 50  0001 C CNN
+	1    10450 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D47
+U 1 1 60947463
+P 10450 5050
+F 0 "D47" H 10450 5000 20  0000 C CNN
+F 1 "blue opaque" V 10405 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10450 5050 50  0001 C CNN
+F 3 "~" V 10450 5050 50  0001 C CNN
+	1    10450 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D63
+U 1 1 60947469
+P 10450 5300
+F 0 "D63" H 10450 5250 20  0000 C CNN
+F 1 "blue opaque" V 10405 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10450 5300 50  0001 C CNN
+F 3 "~" V 10450 5300 50  0001 C CNN
+	1    10450 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D95
+U 1 1 6094746F
+P 10450 5800
+F 0 "D95" H 10450 5750 20  0000 C CNN
+F 1 "blue opaque" V 10405 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10450 5800 50  0001 C CNN
+F 3 "~" V 10450 5800 50  0001 C CNN
+	1    10450 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D111
+U 1 1 60947475
+P 10450 6050
+F 0 "D111" H 10450 6000 20  0000 C CNN
+F 1 "blue opaque" V 10405 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10450 6050 50  0001 C CNN
+F 3 "~" V 10450 6050 50  0001 C CNN
+	1    10450 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D127
+U 1 1 6094747B
+P 10450 6300
+F 0 "D127" H 10450 6250 20  0000 C CNN
+F 1 "blue opaque" V 10405 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10450 6300 50  0001 C CNN
+F 3 "~" V 10450 6300 50  0001 C CNN
+	1    10450 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 10550 4450
+Wire Wire Line
+	10550 4450 10550 4700
+$Comp
+L Device-extra:LED_Small-45 D79
+U 1 1 60947483
+P 10450 5550
+F 0 "D79" H 10450 5500 20  0000 C CNN
+F 1 "blue opaque" V 10405 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10450 5550 50  0001 C CNN
+F 3 "~" V 10450 5550 50  0001 C CNN
+	1    10450 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 4950 10550 4700
+Connection ~ 10550 4700
+Wire Wire Line
+	10550 4950 10550 5200
+Connection ~ 10550 4950
+Wire Wire Line
+	10550 5200 10550 5450
+Connection ~ 10550 5200
+Wire Wire Line
+	10550 5700 10550 5450
+Connection ~ 10550 5450
+Wire Wire Line
+	10550 5700 10550 5950
+Connection ~ 10550 5700
+Wire Wire Line
+	10550 5950 10550 6200
+Connection ~ 10550 5950
+Wire Wire Line
+	10050 4650 10350 4650
+Wire Wire Line
+	10350 4900 10050 4900
+Wire Wire Line
+	10050 5150 10350 5150
+Wire Wire Line
+	10050 5400 10350 5400
+Wire Wire Line
+	10050 5650 10350 5650
+Wire Wire Line
+	10050 5900 10350 5900
+Wire Wire Line
+	10050 6150 10350 6150
+Wire Wire Line
+	10050 6400 10350 6400
+$Comp
+L Device-extra:LED_Small-45 D16
+U 1 1 6095C60B
+P 10750 4550
+F 0 "D16" H 10750 4500 20  0000 C CNN
+F 1 "blue opaque" V 10705 4480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10750 4550 50  0001 C CNN
+F 3 "~" V 10750 4550 50  0001 C CNN
+	1    10750 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D32
+U 1 1 6095C618
+P 10750 4800
+F 0 "D32" H 10750 4750 20  0000 C CNN
+F 1 "blue opaque" V 10705 4730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10750 4800 50  0001 C CNN
+F 3 "~" V 10750 4800 50  0001 C CNN
+	1    10750 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D48
+U 1 1 6095C61E
+P 10750 5050
+F 0 "D48" H 10750 5000 20  0000 C CNN
+F 1 "blue opaque" V 10705 4980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10750 5050 50  0001 C CNN
+F 3 "~" V 10750 5050 50  0001 C CNN
+	1    10750 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D64
+U 1 1 6095C624
+P 10750 5300
+F 0 "D64" H 10750 5250 20  0000 C CNN
+F 1 "blue opaque" V 10705 5230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10750 5300 50  0001 C CNN
+F 3 "~" V 10750 5300 50  0001 C CNN
+	1    10750 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D96
+U 1 1 6095C62A
+P 10750 5800
+F 0 "D96" H 10750 5750 20  0000 C CNN
+F 1 "blue opaque" V 10705 5730 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10750 5800 50  0001 C CNN
+F 3 "~" V 10750 5800 50  0001 C CNN
+	1    10750 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D112
+U 1 1 6095C630
+P 10750 6050
+F 0 "D112" H 10750 6000 20  0000 C CNN
+F 1 "blue opaque" V 10705 5980 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10750 6050 50  0001 C CNN
+F 3 "~" V 10750 6050 50  0001 C CNN
+	1    10750 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device-extra:LED_Small-45 D128
+U 1 1 6095C636
+P 10750 6300
+F 0 "D128" H 10750 6250 20  0000 C CNN
+F 1 "blue opaque" V 10705 6230 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10750 6300 50  0001 C CNN
+F 3 "~" V 10750 6300 50  0001 C CNN
+	1    10750 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 10850 4450
+Wire Wire Line
+	10850 4450 10850 4700
+$Comp
+L Device-extra:LED_Small-45 D80
+U 1 1 6095C63E
+P 10750 5550
+F 0 "D80" H 10750 5500 20  0000 C CNN
+F 1 "blue opaque" V 10705 5480 50  0001 R CNN
+F 2 "LED_THT-extra:LED_D3.0mm_IRGrey" V 10750 5550 50  0001 C CNN
+F 3 "~" V 10750 5550 50  0001 C CNN
+	1    10750 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 4950 10850 4700
+Connection ~ 10850 4700
+Wire Wire Line
+	10850 4950 10850 5200
+Connection ~ 10850 4950
+Wire Wire Line
+	10850 5200 10850 5450
+Connection ~ 10850 5200
+Wire Wire Line
+	10850 5700 10850 5450
+Connection ~ 10850 5450
+Wire Wire Line
+	10850 5700 10850 5950
+Connection ~ 10850 5700
+Wire Wire Line
+	10850 5950 10850 6200
+Connection ~ 10850 5950
+Wire Wire Line
+	10350 4650 10650 4650
+Wire Wire Line
+	10650 4900 10350 4900
+Wire Wire Line
+	10350 5150 10650 5150
+Wire Wire Line
+	10350 5400 10650 5400
+Wire Wire Line
+	10350 5650 10650 5650
+Wire Wire Line
+	10350 5900 10650 5900
+Wire Wire Line
+	10350 6150 10650 6150
+Wire Wire Line
+	10350 6400 10650 6400
+Connection ~ 6500 4650
+Connection ~ 6500 4900
+Connection ~ 6500 5150
+Connection ~ 6500 5400
+Connection ~ 6500 5650
+Connection ~ 6500 5900
+Connection ~ 6500 6150
+Connection ~ 6500 6400
+Connection ~ 6800 4650
+Connection ~ 6800 4900
+Connection ~ 6800 5150
+Connection ~ 6800 5400
+Connection ~ 6800 5650
+Connection ~ 6800 5900
+Connection ~ 6800 6150
+Connection ~ 6800 6400
+Connection ~ 7100 4650
+Connection ~ 7100 4900
+Connection ~ 7100 5150
+Connection ~ 7100 5400
+Connection ~ 7100 5650
+Connection ~ 7100 5900
+Connection ~ 7100 6150
+Connection ~ 7100 6400
+Connection ~ 7400 4650
+Connection ~ 7400 4900
+Connection ~ 7400 5150
+Connection ~ 7400 5400
+Connection ~ 7400 5650
+Connection ~ 7400 5900
+Connection ~ 7400 6150
+Connection ~ 7400 6400
+Connection ~ 7700 4650
+Connection ~ 7700 4900
+Connection ~ 7700 5150
+Connection ~ 7700 5400
+Connection ~ 7700 5650
+Connection ~ 7700 5900
+Connection ~ 7700 6150
+Connection ~ 7700 6400
+Connection ~ 8000 4650
+Connection ~ 8000 4900
+Connection ~ 8000 5150
+Connection ~ 8000 5400
+Connection ~ 8000 5650
+Connection ~ 8000 5900
+Connection ~ 8000 6150
+Connection ~ 8000 6400
+Connection ~ 8300 4650
+Connection ~ 8300 4900
+Connection ~ 8300 5150
+Connection ~ 8300 5400
+Connection ~ 8300 5650
+Connection ~ 8300 5900
+Connection ~ 8300 6150
+Connection ~ 8300 6400
+Connection ~ 8600 4650
+Wire Wire Line
+	8600 4650 8850 4650
+Connection ~ 8600 4900
+Wire Wire Line
+	8600 4900 8850 4900
+Connection ~ 8600 5150
+Wire Wire Line
+	8600 5150 8850 5150
+Connection ~ 8600 5400
+Wire Wire Line
+	8600 5400 8850 5400
+Connection ~ 8600 5650
+Wire Wire Line
+	8600 5650 8850 5650
+Connection ~ 8600 5900
+Wire Wire Line
+	8600 5900 8850 5900
+Connection ~ 8600 6150
+Wire Wire Line
+	8600 6150 8850 6150
+Connection ~ 8600 6400
+Wire Wire Line
+	8600 6400 8850 6400
+Connection ~ 8850 4650
+Connection ~ 8850 4900
+Connection ~ 8850 5150
+Connection ~ 8850 5400
+Connection ~ 8850 5650
+Connection ~ 8850 5900
+Connection ~ 8850 6150
+Connection ~ 8850 6400
+Connection ~ 9150 4650
+Connection ~ 9150 4900
+Connection ~ 9150 5150
+Connection ~ 9150 5400
+Connection ~ 9150 5650
+Connection ~ 9150 5900
+Connection ~ 9150 6150
+Connection ~ 9150 6400
+Connection ~ 9450 4650
+Connection ~ 9450 4900
+Connection ~ 9450 5150
+Connection ~ 9450 5400
+Connection ~ 9450 5650
+Connection ~ 9450 5900
+Connection ~ 9450 6150
+Connection ~ 9450 6400
+Connection ~ 9750 4650
+Connection ~ 9750 4900
+Connection ~ 9750 5150
+Connection ~ 9750 5400
+Connection ~ 9750 5650
+Connection ~ 9750 5900
+Connection ~ 9750 6150
+Connection ~ 9750 6400
+Connection ~ 10050 4650
+Connection ~ 10050 4900
+Connection ~ 10050 5150
+Connection ~ 10050 5400
+Connection ~ 10050 5650
+Connection ~ 10050 5900
+Connection ~ 10050 6150
+Connection ~ 10050 6400
+Connection ~ 10350 4650
+Connection ~ 10350 4900
+Connection ~ 10350 5150
+Connection ~ 10350 5400
+Connection ~ 10350 5650
+Connection ~ 10350 5900
+Connection ~ 10350 6150
+Connection ~ 10350 6400
+$Comp
+L 74xx:74HC595 U2
+U 1 1 609D2B45
+P 9650 3300
+F 0 "U2" H 9750 3950 50  0000 C CNN
+F 1 "74HC595" H 9850 3850 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 9650 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 9650 3300 50  0001 C CNN
+	1    9650 3300
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5250 4950 5700 4950
+Wire Wire Line
+	5700 4950 5700 4650
+Wire Wire Line
+	5700 4650 6200 4650
+Connection ~ 6200 4650
+Wire Wire Line
+	5250 5050 5750 5050
+Wire Wire Line
+	5750 5050 5750 4900
+Wire Wire Line
+	5750 4900 6200 4900
+Connection ~ 6200 4900
+Wire Wire Line
+	5250 5150 6200 5150
+Connection ~ 6200 5150
+Wire Wire Line
+	5250 5650 5750 5650
+Wire Wire Line
+	5750 5650 5750 6400
+Wire Wire Line
+	5750 6400 6200 6400
+Connection ~ 6200 6400
+Wire Wire Line
+	5250 5550 5800 5550
+Wire Wire Line
+	5800 5550 5800 6150
+Wire Wire Line
+	5800 6150 6200 6150
+Connection ~ 6200 6150
+Wire Wire Line
+	5250 5450 5850 5450
+Wire Wire Line
+	5850 5450 5850 5900
+Wire Wire Line
+	5850 5900 6200 5900
+Connection ~ 6200 5900
+Wire Wire Line
+	5250 5350 5900 5350
+Wire Wire Line
+	5900 5350 5900 5650
+Wire Wire Line
+	5900 5650 6200 5650
+Connection ~ 6200 5650
+Wire Wire Line
+	5250 5250 5950 5250
+Wire Wire Line
+	5950 5250 5950 5400
+Wire Wire Line
+	5950 5400 6200 5400
+Connection ~ 6200 5400
+Wire Wire Line
+	7150 3700 7150 3950
+Wire Wire Line
+	7150 3950 6400 3950
+Wire Wire Line
+	7250 3700 7250 4000
+Wire Wire Line
+	7250 4000 6700 4000
+Wire Wire Line
+	7350 3700 7350 4050
+Wire Wire Line
+	7350 4050 7000 4050
+Wire Wire Line
+	7450 3700 7450 4100
+Wire Wire Line
+	7450 4100 7300 4100
+Wire Wire Line
+	7550 3700 7550 4100
+Wire Wire Line
+	7550 4100 7600 4100
+Wire Wire Line
+	7650 3700 7650 4050
+Wire Wire Line
+	7650 4050 7900 4050
+Wire Wire Line
+	7750 3700 7750 4000
+Wire Wire Line
+	7750 4000 8200 4000
+Wire Wire Line
+	7850 3700 7850 3950
+Wire Wire Line
+	7850 3950 8500 3950
+Wire Wire Line
+	9250 3700 9250 3950
+Wire Wire Line
+	9250 3950 8800 3950
+Wire Wire Line
+	9350 3700 9350 4000
+Wire Wire Line
+	9350 4000 9050 4000
+Wire Wire Line
+	9450 3700 9450 4050
+Wire Wire Line
+	9450 4050 9350 4050
+Wire Wire Line
+	9550 3700 9550 4150
+Wire Wire Line
+	9650 3700 9650 4100
+Wire Wire Line
+	9650 4100 9950 4100
+Wire Wire Line
+	9750 3700 9750 4050
+Wire Wire Line
+	9750 4050 10250 4050
+Wire Wire Line
+	9850 3700 9850 4000
+Wire Wire Line
+	9850 4000 10550 4000
+Wire Wire Line
+	9950 3700 9950 3950
+Wire Wire Line
+	9950 3950 10850 3950
+Wire Wire Line
+	8050 3700 8050 3750
+Wire Wire Line
+	8050 3750 8500 3750
+Wire Wire Line
+	8500 3750 8500 2750
+Wire Wire Line
+	8500 2750 9250 2750
+Wire Wire Line
+	9250 2750 9250 2900
+Wire Wire Line
+	5250 5850 5500 5850
+Wire Wire Line
+	5500 5850 5500 2750
+Wire Wire Line
+	5500 2750 7150 2750
+Wire Wire Line
+	7150 2750 7150 2900
+Text GLabel 7350 2750 1    50   Input ~ 0
+PB2
+Wire Wire Line
+	7350 2750 7350 2900
+Text GLabel 9450 2750 1    50   Input ~ 0
+PB2
+Wire Wire Line
+	9450 2750 9450 2900
+$Comp
+L power:+5V #PWR01
+U 1 1 60DB455E
+P 7450 2550
+F 0 "#PWR01" H 7450 2400 50  0001 C CNN
+F 1 "+5V" H 7465 2723 50  0000 C CNN
+F 2 "" H 7450 2550 50  0001 C CNN
+F 3 "" H 7450 2550 50  0001 C CNN
+	1    7450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2550 7450 2900
+$Comp
+L power:GND #PWR05
+U 1 1 60E04E35
+P 8400 3450
+F 0 "#PWR05" H 8400 3200 50  0001 C CNN
+F 1 "GND" H 8405 3277 50  0000 C CNN
+F 2 "" H 8400 3450 50  0001 C CNN
+F 3 "" H 8400 3450 50  0001 C CNN
+	1    8400 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 60E052C2
+P 6800 3050
+F 0 "#PWR03" H 6800 2900 50  0001 C CNN
+F 1 "+5V" H 6815 3223 50  0000 C CNN
+F 2 "" H 6800 3050 50  0001 C CNN
+F 3 "" H 6800 3050 50  0001 C CNN
+	1    6800 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 3050 6800 3300
+Wire Wire Line
+	6800 3300 6950 3300
+Wire Wire Line
+	8400 3450 8400 3300
+Wire Wire Line
+	8400 3300 8250 3300
+$Comp
+L power:+5V #PWR04
+U 1 1 60E57C62
+P 8900 3000
+F 0 "#PWR04" H 8900 2850 50  0001 C CNN
+F 1 "+5V" H 8915 3173 50  0000 C CNN
+F 2 "" H 8900 3000 50  0001 C CNN
+F 3 "" H 8900 3000 50  0001 C CNN
+	1    8900 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 3000 8900 3300
+Wire Wire Line
+	8900 3300 9050 3300
+$Comp
+L power:GND #PWR06
+U 1 1 60E81F00
+P 10500 3450
+F 0 "#PWR06" H 10500 3200 50  0001 C CNN
+F 1 "GND" H 10588 3413 50  0000 L CNN
+F 2 "" H 10500 3450 50  0001 C CNN
+F 3 "" H 10500 3450 50  0001 C CNN
+	1    10500 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 3450 10500 3300
+Wire Wire Line
+	10500 3300 10350 3300
+$Comp
+L power:+5V #PWR02
+U 1 1 60F5BD71
+P 9550 2550
+F 0 "#PWR02" H 9550 2400 50  0001 C CNN
+F 1 "+5V" H 9565 2723 50  0000 C CNN
+F 2 "" H 9550 2550 50  0001 C CNN
+F 3 "" H 9550 2550 50  0001 C CNN
+	1    9550 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 2550 9550 2900
+Wire Wire Line
+	7750 2900 7750 2850
+Text GLabel 9850 2750 1    50   Input ~ 0
+PB0
+Wire Wire Line
+	9850 2900 9850 2850
+Text GLabel 3900 4950 0    50   Input ~ 0
+PB1
+Wire Wire Line
+	3900 5550 4150 5550
+$Comp
+L Device:C C6
+U 1 1 613EAE42
+P 6550 3300
+F 0 "C6" H 6436 3346 50  0000 R CNN
+F 1 "100nF" H 6436 3255 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 6588 3150 50  0001 C CNN
+F 3 "~" H 6550 3300 50  0001 C CNN
+	1    6550 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 613EB3D5
+P 6550 3050
+F 0 "#PWR0101" H 6550 2900 50  0001 C CNN
+F 1 "+5V" H 6565 3223 50  0000 C CNN
+F 2 "" H 6550 3050 50  0001 C CNN
+F 3 "" H 6550 3050 50  0001 C CNN
+	1    6550 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 613EB5D0
+P 6550 3550
+F 0 "#PWR0102" H 6550 3300 50  0001 C CNN
+F 1 "GND" H 6555 3377 50  0000 C CNN
+F 2 "" H 6550 3550 50  0001 C CNN
+F 3 "" H 6550 3550 50  0001 C CNN
+	1    6550 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3050 6550 3150
+Wire Wire Line
+	6550 3450 6550 3550
+$Comp
+L Device:C C5
+U 1 1 6146CB33
+P 8700 3250
+F 0 "C5" H 8700 3350 50  0000 L CNN
+F 1 "100nF" H 8600 3050 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 8738 3100 50  0001 C CNN
+F 3 "~" H 8700 3250 50  0001 C CNN
+	1    8700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0103
+U 1 1 6146DEB9
+P 8700 3000
+F 0 "#PWR0103" H 8700 2850 50  0001 C CNN
+F 1 "+5V" H 8715 3173 50  0000 C CNN
+F 2 "" H 8700 3000 50  0001 C CNN
+F 3 "" H 8700 3000 50  0001 C CNN
+	1    8700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 6146DEC3
+P 8700 3500
+F 0 "#PWR0104" H 8700 3250 50  0001 C CNN
+F 1 "GND" H 8705 3327 50  0000 C CNN
+F 2 "" H 8700 3500 50  0001 C CNN
+F 3 "" H 8700 3500 50  0001 C CNN
+	1    8700 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 3000 8700 3100
+Wire Wire Line
+	8700 3400 8700 3500
+Text GLabel 7750 2750 1    50   Input ~ 0
+PB0
+NoConn ~ 10150 3700
+Wire Wire Line
+	9850 2850 9750 2850
+Wire Wire Line
+	9750 2850 9750 2900
+Connection ~ 9850 2850
+Wire Wire Line
+	9850 2850 9850 2750
+Wire Wire Line
+	7750 2850 7650 2850
+Wire Wire Line
+	7650 2850 7650 2900
+Connection ~ 7750 2850
+Wire Wire Line
+	7750 2850 7750 2750
+Wire Wire Line
+	4150 5550 4150 5450
+Wire Wire Line
+	4150 5450 4250 5450
+Connection ~ 4150 5550
+Wire Wire Line
+	4150 5550 4250 5550
+Wire Wire Line
+	10850 4450 10850 4350
+Wire Wire Line
+	10850 3950 10850 4150
+Wire Wire Line
+	10550 4450 10550 4350
+Wire Wire Line
+	10550 4000 10550 4150
+Wire Wire Line
+	10250 4450 10250 4350
+Wire Wire Line
+	10250 4050 10250 4150
+Wire Wire Line
+	9950 4450 9950 4350
+Wire Wire Line
+	9950 4100 9950 4150
+Wire Wire Line
+	9650 4450 9650 4350
+Wire Wire Line
+	9550 4150 9650 4150
+Wire Wire Line
+	9350 4450 9350 4350
+Wire Wire Line
+	9350 4050 9350 4150
+Wire Wire Line
+	9050 4450 9050 4350
+Wire Wire Line
+	9050 4000 9050 4150
+Wire Wire Line
+	8800 4450 8800 4350
+Wire Wire Line
+	8800 3950 8800 4150
+Wire Wire Line
+	8500 4450 8500 4350
+Wire Wire Line
+	8500 3950 8500 4150
+Wire Wire Line
+	8200 4450 8200 4350
+Wire Wire Line
+	8200 4000 8200 4150
+Wire Wire Line
+	7900 4450 7900 4350
+Wire Wire Line
+	7900 4050 7900 4150
+Wire Wire Line
+	7600 4450 7600 4350
+Wire Wire Line
+	7600 4100 7600 4150
+Wire Wire Line
+	7300 4450 7300 4350
+Wire Wire Line
+	7300 4100 7300 4150
+Wire Wire Line
+	7000 4450 7000 4350
+Wire Wire Line
+	7000 4050 7000 4150
+Wire Wire Line
+	6700 4450 6700 4350
+Wire Wire Line
+	6700 4000 6700 4150
+Wire Wire Line
+	6400 4450 6400 4350
+Wire Wire Line
+	6400 3950 6400 4150
+$Comp
+L Device:R_Small R16
+U 1 1 6095C611
+P 10850 4250
+F 0 "R16" H 10909 4296 50  0000 L CNN
+F 1 "300R" H 10909 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 10850 4250 50  0001 C CNN
+F 3 "~" H 10850 4250 50  0001 C CNN
+	1    10850 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R15
+U 1 1 60947456
+P 10550 4250
+F 0 "R15" H 10609 4296 50  0000 L CNN
+F 1 "300R" H 10609 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 10550 4250 50  0001 C CNN
+F 3 "~" H 10550 4250 50  0001 C CNN
+	1    10550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R14
+U 1 1 60933FC6
+P 10250 4250
+F 0 "R14" H 10309 4296 50  0000 L CNN
+F 1 "300R" H 10309 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 10250 4250 50  0001 C CNN
+F 3 "~" H 10250 4250 50  0001 C CNN
+	1    10250 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R13
+U 1 1 609229C9
+P 9950 4250
+F 0 "R13" H 10009 4296 50  0000 L CNN
+F 1 "300R" H 10009 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 9950 4250 50  0001 C CNN
+F 3 "~" H 9950 4250 50  0001 C CNN
+	1    9950 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 6091290B
+P 9650 4250
+F 0 "R12" H 9709 4296 50  0000 L CNN
+F 1 "300R" H 9709 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 9650 4250 50  0001 C CNN
+F 3 "~" H 9650 4250 50  0001 C CNN
+	1    9650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R11
+U 1 1 60903F3C
+P 9350 4250
+F 0 "R11" H 9409 4296 50  0000 L CNN
+F 1 "300R" H 9409 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 9350 4250 50  0001 C CNN
+F 3 "~" H 9350 4250 50  0001 C CNN
+	1    9350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 608F57D0
+P 9050 4250
+F 0 "R10" H 9109 4296 50  0000 L CNN
+F 1 "300R" H 9109 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 9050 4250 50  0001 C CNN
+F 3 "~" H 9050 4250 50  0001 C CNN
+	1    9050 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 608E8EBB
+P 8800 4250
+F 0 "R9" H 8859 4296 50  0000 L CNN
+F 1 "300R" H 8859 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 8800 4250 50  0001 C CNN
+F 3 "~" H 8800 4250 50  0001 C CNN
+	1    8800 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 608DD7B5
+P 8500 4250
+F 0 "R8" H 8559 4296 50  0000 L CNN
+F 1 "300R" H 8559 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 8500 4250 50  0001 C CNN
+F 3 "~" H 8500 4250 50  0001 C CNN
+	1    8500 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 608D431E
+P 8200 4250
+F 0 "R7" H 8259 4296 50  0000 L CNN
+F 1 "300R" H 8259 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 8200 4250 50  0001 C CNN
+F 3 "~" H 8200 4250 50  0001 C CNN
+	1    8200 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 608CB91E
+P 7900 4250
+F 0 "R6" H 7959 4296 50  0000 L CNN
+F 1 "300R" H 7959 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 7900 4250 50  0001 C CNN
+F 3 "~" H 7900 4250 50  0001 C CNN
+	1    7900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 608C4BCD
+P 7600 4250
+F 0 "R5" H 7659 4296 50  0000 L CNN
+F 1 "300R" H 7659 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 7600 4250 50  0001 C CNN
+F 3 "~" H 7600 4250 50  0001 C CNN
+	1    7600 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 608BDDA7
+P 7300 4250
+F 0 "R4" H 7359 4296 50  0000 L CNN
+F 1 "300R" H 7359 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 7300 4250 50  0001 C CNN
+F 3 "~" H 7300 4250 50  0001 C CNN
+	1    7300 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 608B75CC
+P 7000 4250
+F 0 "R3" H 7059 4296 50  0000 L CNN
+F 1 "300R" H 7059 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 7000 4250 50  0001 C CNN
+F 3 "~" H 7000 4250 50  0001 C CNN
+	1    7000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 60895D29
+P 6700 4250
+F 0 "R2" H 6759 4296 50  0000 L CNN
+F 1 "300R" H 6759 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 6700 4250 50  0001 C CNN
+F 3 "~" H 6700 4250 50  0001 C CNN
+	1    6700 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 607F92F8
+P 6400 4250
+F 0 "R1" H 6459 4296 50  0000 L CNN
+F 1 "300R" H 6459 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 6400 4250 50  0001 C CNN
+F 3 "~" H 6400 4250 50  0001 C CNN
+	1    6400 4250
+	1    0    0    -1  
+$EndComp
+Text Label 7250 3900 1    50   ~ 0
+C1
+Text Label 7350 3900 1    50   ~ 0
+C2
+Text Label 7450 3900 1    50   ~ 0
+C3
+Text Label 7550 3900 1    50   ~ 0
+C4
+Text Label 7650 3900 1    50   ~ 0
+C5
+Text Label 7750 3900 1    50   ~ 0
+C6
+Text Label 7850 3900 1    50   ~ 0
+C7
+Text Label 9250 3900 1    50   ~ 0
+C8
+Text Label 9350 3900 1    50   ~ 0
+C9
+Text Label 9450 3900 1    50   ~ 0
+C10
+Text Label 9550 3900 1    50   ~ 0
+C11
+Text Label 9650 3900 1    50   ~ 0
+C12
+Text Label 9750 3900 1    50   ~ 0
+C13
+Text Label 9850 3900 1    50   ~ 0
+C14
+Text Label 9950 3900 1    50   ~ 0
+C15
+Text Label 7150 3900 1    50   ~ 0
+C0
+Text Label 5300 4950 0    50   ~ 0
+R0
+Text Label 5300 5050 0    50   ~ 0
+R1
+Text Label 5300 5150 0    50   ~ 0
+R2
+Text Label 5300 5250 0    50   ~ 0
+R3
+Text Label 5300 5350 0    50   ~ 0
+R4
+Text Label 5300 5450 0    50   ~ 0
+R5
+Text Label 5300 5550 0    50   ~ 0
+R6
+Text Label 5300 5650 0    50   ~ 0
+R7
+$Comp
+L Power_Supervisor:TPS3839DBZ U6
+U 1 1 60A8A549
+P 3300 3400
+F 0 "U6" H 3170 3446 50  0000 R CNN
+F 1 "MAX809M" H 3170 3355 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3300 3400 50  0001 C CNN
+F 3 "" H 3300 3400 50  0001 C CNN
+	1    3300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR07
+U 1 1 60A8A8CA
+P 3300 2900
+F 0 "#PWR07" H 3300 2750 50  0001 C CNN
+F 1 "+5V" H 3315 3073 50  0000 C CNN
+F 2 "" H 3300 2900 50  0001 C CNN
+F 3 "" H 3300 2900 50  0001 C CNN
+	1    3300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 60A8AC35
+P 3300 4000
+F 0 "#PWR010" H 3300 3750 50  0001 C CNN
+F 1 "GND" H 3305 3827 50  0000 C CNN
+F 2 "" H 3300 4000 50  0001 C CNN
+F 3 "" H 3300 4000 50  0001 C CNN
+	1    3300 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3700 3300 4000
+Wire Wire Line
+	3300 3100 3300 2900
+$Comp
+L Diode:BAV99 D130
+U 1 1 60B3621B
+P 4100 3050
+F 0 "D130" H 4100 3266 50  0000 C CNN
+F 1 "BAV99" H 4100 3175 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4100 2550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4100 3050 50  0001 C CNN
+	1    4100 3050
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 3800 3050
+Wire Wire Line
+	3700 3400 4100 3400
+Wire Wire Line
+	4100 3400 4100 3250
+Text GLabel 4900 3050 2    50   Output ~ 0
+~RESET
+$Comp
+L Device:R R18
+U 1 1 60BB6FC2
+P 4650 3050
+F 0 "R18" V 4443 3050 50  0000 C CNN
+F 1 "100R" V 4534 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4580 3050 50  0001 C CNN
+F 3 "~" H 4650 3050 50  0001 C CNN
+	1    4650 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4800 3050 4900 3050
+Wire Wire Line
+	4500 3050 4400 3050
+$EndSCHEMATC
