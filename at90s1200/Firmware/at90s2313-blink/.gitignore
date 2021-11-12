@@ -1,6 +1,0 @@
-*.aws
-*.lst
-*.map
-*.obj
-AvrBuild.bat
-labels.tmp
