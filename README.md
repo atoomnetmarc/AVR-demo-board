@@ -37,7 +37,7 @@ There is a simpler solution, just use an [updated GCC](https://blog.zakkemble.ne
 
 I was pleasantly surprised to find out that compiling a c-program using VSCode and PlatformIO also is a viable option. See the firmware directory of the at90s2323 for an example on how to configure PlatformIO or see [the PlatformIO example native-blink](https://github.com/platformio/platform-atmelavr/tree/develop/examples/native-blink).
 
-It is also possible to program the at90s1200 in VSCode with assembler! Have a look at [at90s1200/Firmware/at90s1200-blink/](at90s1200/Firmware/at90s1200-blink/).
+It is also possible to program the at90s1200 in VSCode with PlatformIO in assembler! Have a look at [at90s1200/Firmware/at90s1200-blink/](at90s1200/Firmware/blink/).
 
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
