@@ -20,8 +20,14 @@ SPDX-License-Identifier: Apache-2.0
 #define temp r22
 
 ; isr starts every 32.77 ms
+#if defined (__AVR_AT90S1200__)
 .global TIMER0_OVF_vect
 TIMER0_OVF_vect:
+#elif defined (__AVR_AT90S2313__)
+.global TIMER0_OVF0_vect
+TIMER0_OVF0_vect:
+#endif
+
     in S, _SFR_IO_ADDR(SREG)
     inc pause
     out _SFR_IO_ADDR(SREG), S
@@ -29,6 +35,13 @@ TIMER0_OVF_vect:
 
 .global main
 main:
+
+#if defined (__AVR_AT90S2313__)
+    ;initialize stack pointer
+    ldi r16, lo8(RAMEND)
+    out _SFR_IO_ADDR(SPL), r16
+#endif
+
     ldi temp, (1<<CS02) | (1<<CS00) ; Timer clock = system clock / 1024
     out _SFR_IO_ADDR(TCCR0), temp
     ldi temp, 1<<TOV0
