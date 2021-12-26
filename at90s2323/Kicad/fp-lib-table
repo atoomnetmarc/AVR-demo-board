@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name LED_THT-extra)(type KiCad)(uri ${ATOOMNETKICAD}/footprints/LED_THT-extra.pretty)(options "")(descr ""))
-)

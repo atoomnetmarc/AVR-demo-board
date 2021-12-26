@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name MCU_Microchip_AVR-extra)(type Legacy)(uri ${ATOOMNETKICAD}/symbols/MCU_Microchip_AVR-extra.lib)(options "")(descr ""))
-)
