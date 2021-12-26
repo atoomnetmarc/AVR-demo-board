@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "Device-extra")(type "KiCad")(uri "${ATOOMNETKICAD}/symbols/Device-extra.kicad_sym")(options "")(descr ""))
+  (lib (name "Interface_Expansion-extra")(type "KiCad")(uri "${ATOOMNETKICAD}/symbols/Interface_Expansion-extra.kicad_sym")(options "")(descr ""))
+  (lib (name "MCU_Microchip_AVR-extra")(type "KiCad")(uri "${ATOOMNETKICAD}/symbols/MCU_Microchip_AVR-extra.kicad_sym")(options "")(descr ""))
+)
