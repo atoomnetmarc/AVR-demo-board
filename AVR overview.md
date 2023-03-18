@@ -81,7 +81,7 @@ This document tries to group mostly similar AVR devices in tables. In this docum
 
 | Pin   | Common    | AT90S2333<br /> AT90S4433 | ATmega8           | ATtiny48<br /> ATtiny88       | ATmega48<br />ATmega88<br />ATmega168<br />ATmega328  |
 | --:   | --        | --                        | --                | --                            | --                                                    |
-| 1     | RESET     |                           | **PC6**           | PC6, **PCINT14**              | PC6, PCINT14                                          |
+| 1     | RESET     |                           | **PC6**           | PC6, **PCINT14**              | PC6, PCINT14, **dW**                                  |
 | 2     | PD0       | **RXD**                   | RXD               | **PCINT16**                   | RXD, PCINT16                                          |
 | 3     | PD1       | **TXD**                   | TXD               | **PCINT17**                   | TXD, PCINT17                                          |
 | 4     | PD2, INT0 |                           |                   | **PCINT18**                   | PCINT18                                               |
