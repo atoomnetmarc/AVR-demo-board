@@ -167,8 +167,8 @@ This document tries to group mostly similar AVR devices in tables. In this docum
 | --            | --:   | --:       | --:       | --:   | --:           | --                |
 | AT90S4434     | 4K    | 256B      | 256B      | 8MHz  | 118           | 1999              |
 | AT90S8535     | 8K    | 512B      | 512B      | 8MHz  | 118           | 1999              |
-| ATmega8535    | 8K    | 512B      | 512B      | 16MHz | 130           | 2001              |
 | ATmega163     | 16K   | 1024B     | 512B      | 8MHz  | 130           | 2001              |
+| ATmega8535    | 8K    | 512B      | 512B      | 16MHz | 130           | 2001              |
 | ATmega323     | 32K   | 2048B     | 1024B     | 8MHz  | 130           | 2001              |
 | ATmega16      | 16K   | 1024B     | 512B      | 16MHz | 131           | 2002              |
 | ATmega32      | 32K   | 2048B     | 1024B     | 16MHz | 131           | 2002              |
@@ -177,47 +177,47 @@ This document tries to group mostly similar AVR devices in tables. In this docum
 | ATmega164     | 16K   | 1024B     | 512B      | 20MHz | 131           | 2010              |
 | ATmega324     | 32K   | 2048B     | 1024B     | 20MHz | 131           | 2010              |
 
-| Pin   | Common        | AT90S4434<br />AT90S8535  | ATmega163         | ATmega323<br />ATmega16<br />ATmega32 | ATmega644             | ATmega164P<br />ATmega324P<br />ATmega644P    | ATmega164(P)A<br />ATmega324(P)A<br />ATmega644(P)A<br />ATmega1284(P)    |
-| --:   | --            | --                        | --                | --                                    | --                    | --                                            | --                                                                        |
-| 1     | PB0, T0       |                           |                   | **XCK**                               | **XCK0**, **PCINT8**  | XCK0, PCINT8                                  | XCK0, PCINT8
-| 2     | PB1, T1       |                           |                   |                                       | **CLKO**, **PCINT9**  | CLKO, PCINT9                                  | CLKO, PCINT9
-| 3     | PB2, AIN0     |                           |                   | **INT2**                              | INT2, **PCINT10**     | INT2, PCINT10                                 | INT2, PCINT10
-| 4     | PB3, AIN1     |                           |                   | **OC0**                               | **OC0A**, **PCINT11** | OC0A, PCINT11                                 | OC0A, PCINT11
-| 5     | PB4, SS       |                           |                   |                                       | **OC0B**, **PCINT12** | OC0B, PCINT12                                 | OC0B, PCINT12
-| 6     | PB5, MOSI     |                           |                   |                                       | **PCINT13**           | PCINT13                                       | **ICP3**, PCINT13
-| 7     | PB6, MISO     |                           |                   |                                       | **PCINT14**           | PCINT14                                       | **OC3A**, PCINT14
-| 8     | PB7, SCK      |                           |                   |                                       | **PCINT15**           | PCINT15                                       | **OC3B**, PCINT15
-| 9     | RESET         |                           |                   |                                       |                       |                                               |
-| 10    | VCC           |                           |                   |                                       |                       |                                               |
-| 11    | GND           |                           |                   |                                       |                       |                                               |
-| 12    | XTAL2         |                           |                   |                                       |                       |                                               |
-| 13    | XTAL1         |                           |                   |                                       |                       |                                               |
-| 14    | PD0, RXD      |                           |                   |                                       | **RXD0**, **PCINT24** | RXD0, PCINT24                                 | **T3**, RXD0, PCINT24
-| 15    | PD1, TXD      |                           |                   |                                       | **TXD0**, **PCINT25** | TXD0, PCINT25                                 | TXD0, PCINT25
-| 16    | PD2, INT0     |                           |                   |                                       | **PCINT26**           | **RXD1**, PCINT26                             | RXD1, PCINT26
-| 17    | PD3, INT1     |                           |                   |                                       | **PCINT27**           | **TXD1**, PCINT27                             | TXD1, PCINT27
-| 18    | PD4, OC1B     |                           |                   |                                       | **PCINT28**           | **XCK1**, PCINT28                             | XCK1, PCINT28
-| 19    | PD5, OC1A     |                           |                   |                                       | **PCINT29**           | PCINT29                                       | PCINT29
-| 20    | PD6, ICP      |                           |                   |                                       | **OC2B**, **PCINT30** | OC2B, PCINT30                                 | OC2B, PCINT30
-| 21    | PD7, OC2      |                           |                   |                                       | **OC2A**, **PCINT31** | OC2A, PCINT31                                 | OC2A, PCINT31
-| 22    | PC0           |                           | **SCL**           | SCL                                   | SCL, **PCINT16**      | SCL, PCINT16                                  | SCL, PCINT16
-| 23    | PC1           |                           | **SDA**           | SDA                                   | SDA, **PCINT17**      | SDA, PCINT17                                  | SDA, PCINT17
-| 24    | PC2           |                           |                   | **TCK**                               | TCK, **PCINT18**      | TCK, PCINT18                                  | TCK, PCINT18
-| 25    | PC3           |                           |                   | **TMS**                               | TMS, **PCINT19**      | TMS, PCINT19                                  | TMS, PCINT19
-| 26    | PC4           |                           |                   | **TDO**                               | TDO, **PCINT20**      | TDO, PCINT20                                  | TDO, PCINT20
-| 27    | PC5           |                           |                   | **TDI**                               | TDI, **PCINT21**      | TDI, PCINT21                                  | TDI, PCINT21
-| 28    | PC6, TOSC1    |                           |                   |                                       | **PCINT22**           | PCINT22                                       | PCINT22
-| 29    | PC7, TOSC2    |                           |                   |                                       | **PCINT23**           | PCINT23                                       | PCINT23
-| 30    | AVCC          |                           |                   |                                       |                       |                                               |
-| 31    | AGND          |                           |                   |                                       |                       |                                               |
-| 32    | AREF          |                           |                   |                                       |                       |                                               |
-| 33    | PA7, ADC7     |                           |                   |                                       | **PCINT7**            | PCINT7                                        | PCINT7
-| 34    | PA6, ADC6     |                           |                   |                                       | **PCINT6**            | PCINT6                                        | PCINT6
-| 35    | PA5, ADC5     |                           |                   |                                       | **PCINT5**            | PCINT5                                        | PCINT5
-| 36    | PA4, ADC4     |                           |                   |                                       | **PCINT4**            | PCINT4                                        | PCINT4
-| 37    | PA3, ADC3     |                           |                   |                                       | **PCINT3**            | PCINT3                                        | PCINT3
-| 38    | PA2, ADC2     |                           |                   |                                       | **PCINT2**            | PCINT2                                        | PCINT2
-| 39    | PA1, ADC1     |                           |                   |                                       | **PCINT1**            | PCINT1                                        | PCINT1
-| 40    | PA0, ADC0     |                           |                   |                                       | **PCINT0**            | PCINT0                                        | PCINT0
+| Pin   | Common        | AT90S4434<br />AT90S8535  | ATmega163         | ATmega8535    | ATmega323<br />ATmega16<br />ATmega32 | ATmega644             | ATmega164P<br />ATmega324P<br />ATmega644P    | ATmega164(P)A<br />ATmega324(P)A<br />ATmega644(P)A<br />ATmega1284(P)    |
+| --:   | --            | --                        | --                | --            | --                                    | --                    | --                                            | --                                                                        |
+| 1     | PB0, T0       |                           |                   | **XCK**       | XCK                                   | **XCK0**, **PCINT8**  | XCK0, PCINT8                                  | XCK0, PCINT8
+| 2     | PB1, T1       |                           |                   |               |                                       | **CLKO**, **PCINT9**  | CLKO, PCINT9                                  | CLKO, PCINT9
+| 3     | PB2, AIN0     |                           |                   | **INT2**      | INT2                                  | INT2, **PCINT10**     | INT2, PCINT10                                 | INT2, PCINT10
+| 4     | PB3, AIN1     |                           |                   | **OC0**       | OC0                                   | **OC0A**, **PCINT11** | OC0A, PCINT11                                 | OC0A, PCINT11
+| 5     | PB4, SS       |                           |                   |               |                                       | **OC0B**, **PCINT12** | OC0B, PCINT12                                 | OC0B, PCINT12
+| 6     | PB5, MOSI     |                           |                   |               |                                       | **PCINT13**           | PCINT13                                       | **ICP3**, PCINT13
+| 7     | PB6, MISO     |                           |                   |               |                                       | **PCINT14**           | PCINT14                                       | **OC3A**, PCINT14
+| 8     | PB7, SCK      |                           |                   |               |                                       | **PCINT15**           | PCINT15                                       | **OC3B**, PCINT15
+| 9     | RESET         |                           |                   |               |                                       |                       |                                               |
+| 10    | VCC           |                           |                   |               |                                       |                       |                                               |
+| 11    | GND           |                           |                   |               |                                       |                       |                                               |
+| 12    | XTAL2         |                           |                   |               |                                       |                       |                                               |
+| 13    | XTAL1         |                           |                   |               |                                       |                       |                                               |
+| 14    | PD0, RXD      |                           |                   |               |                                       | **RXD0**, **PCINT24** | RXD0, PCINT24                                 | **T3**, RXD0, PCINT24
+| 15    | PD1, TXD      |                           |                   |               |                                       | **TXD0**, **PCINT25** | TXD0, PCINT25                                 | TXD0, PCINT25
+| 16    | PD2, INT0     |                           |                   |               |                                       | **PCINT26**           | **RXD1**, PCINT26                             | RXD1, PCINT26
+| 17    | PD3, INT1     |                           |                   |               |                                       | **PCINT27**           | **TXD1**, PCINT27                             | TXD1, PCINT27
+| 18    | PD4, OC1B     |                           |                   |               |                                       | **PCINT28**           | **XCK1**, PCINT28                             | XCK1, PCINT28
+| 19    | PD5, OC1A     |                           |                   |               |                                       | **PCINT29**           | PCINT29                                       | PCINT29
+| 20    | PD6, ICP      |                           |                   |               |                                       | **OC2B**, **PCINT30** | OC2B, PCINT30                                 | OC2B, PCINT30
+| 21    | PD7, OC2      |                           |                   |               |                                       | **OC2A**, **PCINT31** | OC2A, PCINT31                                 | OC2A, PCINT31
+| 22    | PC0           |                           | **SCL**           | SCL           | SCL                                   | SCL, **PCINT16**      | SCL, PCINT16                                  | SCL, PCINT16
+| 23    | PC1           |                           | **SDA**           | SDA           | SDA                                   | SDA, **PCINT17**      | SDA, PCINT17                                  | SDA, PCINT17
+| 24    | PC2           |                           |                   |               | **TCK**                               | TCK, **PCINT18**      | TCK, PCINT18                                  | TCK, PCINT18
+| 25    | PC3           |                           |                   |               | **TMS**                               | TMS, **PCINT19**      | TMS, PCINT19                                  | TMS, PCINT19
+| 26    | PC4           |                           |                   |               | **TDO**                               | TDO, **PCINT20**      | TDO, PCINT20                                  | TDO, PCINT20
+| 27    | PC5           |                           |                   |               | **TDI**                               | TDI, **PCINT21**      | TDI, PCINT21                                  | TDI, PCINT21
+| 28    | PC6, TOSC1    |                           |                   |               |                                       | **PCINT22**           | PCINT22                                       | PCINT22
+| 29    | PC7, TOSC2    |                           |                   |               |                                       | **PCINT23**           | PCINT23                                       | PCINT23
+| 30    | AVCC          |                           |                   |               |                                       |                       |                                               |
+| 31    | AGND          |                           |                   |               |                                       |                       |                                               |
+| 32    | AREF          |                           |                   |               |                                       |                       |                                               |
+| 33    | PA7, ADC7     |                           |                   |               |                                       | **PCINT7**            | PCINT7                                        | PCINT7
+| 34    | PA6, ADC6     |                           |                   |               |                                       | **PCINT6**            | PCINT6                                        | PCINT6
+| 35    | PA5, ADC5     |                           |                   |               |                                       | **PCINT5**            | PCINT5                                        | PCINT5
+| 36    | PA4, ADC4     |                           |                   |               |                                       | **PCINT4**            | PCINT4                                        | PCINT4
+| 37    | PA3, ADC3     |                           |                   |               |                                       | **PCINT3**            | PCINT3                                        | PCINT3
+| 38    | PA2, ADC2     |                           |                   |               |                                       | **PCINT2**            | PCINT2                                        | PCINT2
+| 39    | PA1, ADC1     |                           |                   |               |                                       | **PCINT1**            | PCINT1                                        | PCINT1
+| 40    | PA0, ADC0     |                           |                   |               |                                       | **PCINT0**            | PCINT0                                        | PCINT0
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
