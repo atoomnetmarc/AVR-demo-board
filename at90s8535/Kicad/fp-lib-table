@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Connector_BarrelJack-fixed")(type "KiCad")(uri "${ATOOMNETKICAD}/footprints/Connector_BarrelJack-fixed.pretty")(options "")(descr ""))
+  (lib (name "Connector_PinHeader_2.54mm-extra")(type "KiCad")(uri "${ATOOMNETKICAD}/footprints/Connector_PinHeader_2.54mm-extra.pretty")(options "")(descr ""))
+  (lib (name "Connector_PinSocket_2.54mm-extra")(type "KiCad")(uri "${ATOOMNETKICAD}/footprints/Connector_PinSocket_2.54mm-extra.pretty")(options "")(descr ""))
+)
