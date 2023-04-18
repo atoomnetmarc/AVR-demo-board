@@ -1342,7 +1342,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Bridged") (at 52.07 110.49 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8173bd52-1780-472b-bddf-780a2aa436a1)
     (property "Reference" "JP1" (at 52.07 107.95 0)
       (effects (font (size 1.27 1.27)))
