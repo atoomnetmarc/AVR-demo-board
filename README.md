@@ -28,9 +28,9 @@ All pin-compatible microcontrollers will fit. When using a ATmega163 or newer, J
 
 On the back of the PCB there is a SOT-23 voltage monitor that functions as a BOD (brow out detector). Unlike newer parts, the AT90S8535 does not have a onboard BOD.
 
-At the moment this board has only been designed and not yet made into a real PCB. It is unknown if this board functions correctly of set the neighbors pond on fire.
+More information about this board: [README.md](at90s8535/README.md)
 
-![](at90s8535/Kicad/at90s8535-render.png)
+![](at90s8535/Kicad/at90s8535.jpg)
 
 # Programming vintage AVRs in 2023
 
