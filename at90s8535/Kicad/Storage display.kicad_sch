@@ -473,7 +473,7 @@
   (symbol (lib_id "power:+3.3V") (at 88.9 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2d4c0fa8-3649-4c3f-a190-104df880b344)
-    (property "Reference" "#PWR023" (at 88.9 91.44 0)
+    (property "Reference" "#PWR019" (at 88.9 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 88.9 83.82 0)
@@ -488,9 +488,6 @@
     (pin "1" (uuid d6ec0f5a-98c6-45d8-a851-fb926b7d6ff8))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR023") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
           (reference "#PWR019") (unit 1)
         )
@@ -521,9 +518,6 @@
         )
       )
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR039") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
           (reference "#PWR024") (unit 1)
         )
@@ -564,7 +558,7 @@
   (symbol (lib_id "power:+3.3V") (at 58.42 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6453c6ef-4dd6-4c51-a93b-a3aaf564242e)
-    (property "Reference" "#PWR023" (at 58.42 40.64 0)
+    (property "Reference" "#PWR042" (at 58.42 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 58.42 33.02 0)
@@ -579,9 +573,6 @@
     (pin "1" (uuid 57e707c9-544a-4eb5-a069-25f2a4ed02e3))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR023") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
           (reference "#PWR042") (unit 1)
         )
@@ -648,9 +639,6 @@
         )
       )
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR039") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
           (reference "#PWR031") (unit 1)
         )
@@ -676,9 +664,6 @@
     (pin "1" (uuid cde070f7-5d45-4c08-988e-98ae1512a7d9))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR023") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
           (reference "#PWR023") (unit 1)
         )
@@ -709,9 +694,6 @@
         )
       )
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR039") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
           (reference "#PWR018") (unit 1)
         )

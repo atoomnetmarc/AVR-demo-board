@@ -965,7 +965,7 @@
   (symbol (lib_id "74xx:74LS125") (at 247.65 93.98 0) (mirror y) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0820e357-eafe-45ac-bde5-cb8a5a241a23)
-    (property "Reference" "U6" (at 247.65 86.36 0)
+    (property "Reference" "U8" (at 247.65 86.36 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74AHCT125D" (at 247.65 88.9 0)
@@ -993,9 +993,6 @@
     (pin "7" (uuid 69c6aa57-9482-4b9d-bc00-c5369f3ec581))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U6") (unit 4)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U8") (unit 4)
         )
@@ -1006,10 +1003,10 @@
   (symbol (lib_id "74xx:74LS125") (at 177.8 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 14625670-67fa-4a8f-96c6-67ecdb574f78)
-    (property "Reference" "U8" (at 177.8 36.83 0)
+    (property "Reference" "U11" (at 177.8 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 177.8 39.37 0)
+    (property "Value" "74AHC125D" (at 177.8 39.37 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 177.8 44.45 0)
@@ -1034,9 +1031,6 @@
     (pin "7" (uuid a8de8a78-845d-4d6b-9d25-d8fa713808c0))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U11") (unit 1)
         )
@@ -1047,10 +1041,10 @@
   (symbol (lib_id "74xx:74LS125") (at 115.57 93.98 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 157848ba-e6cf-4cd2-9203-cc81147a3bba)
-    (property "Reference" "U8" (at 115.57 86.36 0)
+    (property "Reference" "U6" (at 115.57 86.36 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 115.57 88.9 0)
+    (property "Value" "74AHC125D" (at 115.57 88.9 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 115.57 93.98 0)
@@ -1075,9 +1069,6 @@
     (pin "7" (uuid 69c6aa57-9482-4b9d-bc00-c5369f3ec583))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 4)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U6") (unit 4)
         )
@@ -1088,10 +1079,10 @@
   (symbol (lib_id "74xx:74LS125") (at 115.57 124.46 0) (unit 5)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1e9dae06-84e8-4546-9072-eaa596bea4b3)
-    (property "Reference" "U8" (at 109.22 115.57 0)
+    (property "Reference" "U6" (at 109.22 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "74AHCT125D" (at 116.84 115.57 0)
+    (property "Value" "74AHC125D" (at 116.84 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 115.57 124.46 0)
@@ -1116,9 +1107,6 @@
     (pin "7" (uuid 62dc9b00-0735-43e3-a4e2-3d0b8a6320b7))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 5)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U6") (unit 5)
         )
@@ -1132,7 +1120,7 @@
     (property "Reference" "U3" (at 50.8 86.36 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 50.8 88.9 0)
+    (property "Value" "74AHC125D" (at 50.8 88.9 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 50.8 93.98 0)
@@ -1157,9 +1145,6 @@
     (pin "7" (uuid 69c6aa57-9482-4b9d-bc00-c5369f3ec582))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U3") (unit 4)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U3") (unit 4)
         )
@@ -1170,7 +1155,7 @@
   (symbol (lib_id "power:+3.3V") (at 193.04 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2d871b11-7694-4c15-8907-3fc25191eb63)
-    (property "Reference" "#PWR049" (at 193.04 111.76 0)
+    (property "Reference" "#PWR071" (at 193.04 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 193.04 104.14 0)
@@ -1185,9 +1170,6 @@
     (pin "1" (uuid 111f7022-8863-4063-b295-9e3449ded068))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR049") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR071") (unit 1)
         )
@@ -1198,10 +1180,10 @@
   (symbol (lib_id "74xx:74LS125") (at 177.8 60.96 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 318f4528-95d4-4e8e-bd3b-8bcc47028440)
-    (property "Reference" "U8" (at 177.8 53.34 0)
+    (property "Reference" "U11" (at 177.8 53.34 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 177.8 55.88 0)
+    (property "Value" "74AHC125D" (at 177.8 55.88 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 177.8 60.96 0)
@@ -1226,9 +1208,6 @@
     (pin "7" (uuid 109fe293-fd2d-4205-9455-32958f7f2292))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 2)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U11") (unit 2)
         )
@@ -1239,7 +1218,7 @@
   (symbol (lib_id "power:GND") (at 130.81 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3311a213-111d-4adf-b918-d32755b08813)
-    (property "Reference" "#PWR050" (at 130.81 147.32 0)
+    (property "Reference" "#PWR033" (at 130.81 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 130.81 146.05 0)
@@ -1254,9 +1233,6 @@
     (pin "1" (uuid 0d90d939-1792-418b-a733-6a9ab967dbe9))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR050") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR033") (unit 1)
         )
@@ -1267,7 +1243,7 @@
   (symbol (lib_id "74xx:74LS125") (at 247.65 60.96 0) (mirror y) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3f7a38e1-7bd5-4c50-8fc3-90c63bba5f1e)
-    (property "Reference" "U6" (at 247.65 53.34 0)
+    (property "Reference" "U8" (at 247.65 53.34 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74AHCT125D" (at 247.65 55.88 0)
@@ -1295,9 +1271,6 @@
     (pin "7" (uuid 109fe293-fd2d-4205-9455-32958f7f2291))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U6") (unit 2)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U8") (unit 2)
         )
@@ -1311,7 +1284,7 @@
     (property "Reference" "U3" (at 50.8 69.85 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 50.8 72.39 0)
+    (property "Value" "74AHC125D" (at 50.8 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 50.8 77.47 0)
@@ -1336,9 +1309,6 @@
     (pin "7" (uuid 952cac6c-07a0-450b-a278-839e3a1444cd))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U3") (unit 3)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U3") (unit 3)
         )
@@ -1349,10 +1319,10 @@
   (symbol (lib_id "74xx:74LS125") (at 115.57 77.47 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 564ea363-f57a-4e58-944d-d72b7c787f68)
-    (property "Reference" "U8" (at 115.57 69.85 0)
+    (property "Reference" "U6" (at 115.57 69.85 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 115.57 72.39 0)
+    (property "Value" "74AHC125D" (at 115.57 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 115.57 77.47 0)
@@ -1377,9 +1347,6 @@
     (pin "7" (uuid 952cac6c-07a0-450b-a278-839e3a1444cc))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 3)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U6") (unit 3)
         )
@@ -1390,7 +1357,7 @@
   (symbol (lib_id "74xx:74LS125") (at 248.92 124.46 0) (unit 5)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5c46cfb4-7a22-4db7-9a64-40383280101d)
-    (property "Reference" "U6" (at 242.57 115.57 0)
+    (property "Reference" "U8" (at 242.57 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "74AHCT125D" (at 250.19 115.57 0)
@@ -1418,9 +1385,6 @@
     (pin "7" (uuid 274a0911-1aaf-4b8f-98ca-0deb29e0d4a4))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U6") (unit 5)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U8") (unit 5)
         )
@@ -1431,10 +1395,10 @@
   (symbol (lib_id "74xx:74LS125") (at 177.8 124.46 0) (unit 5)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5e128e61-0dad-4ce2-b3aa-16400b1a7532)
-    (property "Reference" "U8" (at 171.45 115.57 0)
+    (property "Reference" "U11" (at 171.45 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "74AHCT125D" (at 179.07 115.57 0)
+    (property "Value" "74AHC125D" (at 179.07 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 177.8 124.46 0)
@@ -1459,9 +1423,6 @@
     (pin "7" (uuid 0a8d5f75-c153-4b65-a51f-26e76e264762))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 5)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U11") (unit 5)
         )
@@ -1472,7 +1433,7 @@
   (symbol (lib_id "power:+3.3V") (at 130.81 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 614e58c6-acb7-4052-ab1d-85d619d2e323)
-    (property "Reference" "#PWR049" (at 130.81 111.76 0)
+    (property "Reference" "#PWR029" (at 130.81 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 130.81 104.14 0)
@@ -1487,9 +1448,6 @@
     (pin "1" (uuid a0c3ffd2-51d9-452a-a71b-df841f9ecdaa))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR049") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR029") (unit 1)
         )
@@ -1500,7 +1458,7 @@
   (symbol (lib_id "Device:C") (at 193.04 124.46 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 64463d3a-9f34-472c-9acf-4e24d13a0714)
-    (property "Reference" "C13" (at 196.85 123.825 0)
+    (property "Reference" "C18" (at 196.85 123.825 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 196.85 126.365 0)
@@ -1516,9 +1474,6 @@
     (pin "2" (uuid 591a7f8e-6f81-40af-b244-fe17a1a2ab34))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "C13") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "C18") (unit 1)
         )
@@ -1529,7 +1484,7 @@
   (symbol (lib_id "power:GND") (at 193.04 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6f41ecb8-1daf-41a9-8f29-424a2763d672)
-    (property "Reference" "#PWR050" (at 193.04 147.32 0)
+    (property "Reference" "#PWR072" (at 193.04 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 193.04 146.05 0)
@@ -1544,9 +1499,6 @@
     (pin "1" (uuid 5734f42e-f34a-4605-bb64-04d0d803456f))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR050") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR072") (unit 1)
         )
@@ -1557,7 +1509,7 @@
   (symbol (lib_id "74xx:74LS125") (at 247.65 44.45 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7575f956-0cf6-480e-bf89-b62452e5a107)
-    (property "Reference" "U6" (at 247.65 36.83 0)
+    (property "Reference" "U8" (at 247.65 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74AHCT125D" (at 247.65 39.37 0)
@@ -1585,9 +1537,6 @@
     (pin "7" (uuid a8de8a78-845d-4d6b-9d25-d8fa713808bf))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U6") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U8") (unit 1)
         )
@@ -1598,7 +1547,7 @@
   (symbol (lib_id "power:+3.3V") (at 177.8 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 77d90370-e184-4eb9-98b4-1e712f7cf41f)
-    (property "Reference" "#PWR022" (at 177.8 111.76 0)
+    (property "Reference" "#PWR069" (at 177.8 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 177.8 104.14 0)
@@ -1613,9 +1562,6 @@
     (pin "1" (uuid 61db49fa-2b31-4a9f-8a56-ac00de351098))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR022") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR069") (unit 1)
         )
@@ -1626,7 +1572,7 @@
   (symbol (lib_id "power:+5V") (at 264.16 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7dee4613-d46a-4a42-b4b7-5b945447a7c7)
-    (property "Reference" "#PWR046" (at 264.16 111.76 0)
+    (property "Reference" "#PWR045" (at 264.16 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 264.16 104.14 0)
@@ -1641,9 +1587,6 @@
     (pin "1" (uuid ff43a211-f262-4057-8372-32f309b24ba5))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR046") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR045") (unit 1)
         )
@@ -1654,10 +1597,10 @@
   (symbol (lib_id "74xx:74LS125") (at 177.8 93.98 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 843eb528-de33-4a9c-b315-6f3c11c44d3d)
-    (property "Reference" "U8" (at 177.8 86.36 0)
+    (property "Reference" "U11" (at 177.8 86.36 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 177.8 88.9 0)
+    (property "Value" "74AHC125D" (at 177.8 88.9 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 177.8 93.98 0)
@@ -1682,9 +1625,6 @@
     (pin "7" (uuid 69c6aa57-9482-4b9d-bc00-c5369f3ec584))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 4)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U11") (unit 4)
         )
@@ -1695,7 +1635,7 @@
   (symbol (lib_id "power:GND") (at 115.57 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8a7f9cb0-566f-4b4d-949e-810f52f15d96)
-    (property "Reference" "#PWR038" (at 115.57 147.32 0)
+    (property "Reference" "#PWR028" (at 115.57 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 115.57 146.05 0)
@@ -1710,9 +1650,6 @@
     (pin "1" (uuid aa3e5a15-e6c8-48b6-a112-39f2aaf89d71))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR038") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR028") (unit 1)
         )
@@ -1723,7 +1660,7 @@
   (symbol (lib_id "Device:C") (at 130.81 124.46 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9a085cea-225f-4a51-8eb7-4effc5b04aa7)
-    (property "Reference" "C13" (at 134.62 123.825 0)
+    (property "Reference" "C8" (at 134.62 123.825 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 134.62 126.365 0)
@@ -1739,9 +1676,6 @@
     (pin "2" (uuid e739c844-5d9d-46a3-94a5-7ee0ad77430a))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "C13") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "C8") (unit 1)
         )
@@ -1752,7 +1686,7 @@
   (symbol (lib_id "power:GND") (at 177.8 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a82b0e64-d8fc-45c9-bdc3-5004536d3546)
-    (property "Reference" "#PWR038" (at 177.8 147.32 0)
+    (property "Reference" "#PWR070" (at 177.8 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 177.8 146.05 0)
@@ -1767,9 +1701,6 @@
     (pin "1" (uuid b6a4a450-dc73-452d-a298-542ea56048c9))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR038") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR070") (unit 1)
         )
@@ -1796,9 +1727,6 @@
     (pin "2" (uuid a199e024-0437-492c-8087-515c44b9fad9))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "C11") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "C11") (unit 1)
         )
@@ -1809,7 +1737,7 @@
   (symbol (lib_id "74xx:74LS125") (at 247.65 77.47 0) (mirror y) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ae24d3ab-9dac-4f1b-8326-4da783747eef)
-    (property "Reference" "U6" (at 247.65 69.85 0)
+    (property "Reference" "U8" (at 247.65 69.85 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "74AHCT125D" (at 247.65 72.39 0)
@@ -1837,9 +1765,6 @@
     (pin "7" (uuid 952cac6c-07a0-450b-a278-839e3a1444cb))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U6") (unit 3)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U8") (unit 3)
         )
@@ -1850,10 +1775,10 @@
   (symbol (lib_id "74xx:74LS125") (at 115.57 60.96 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b0bd15ce-67e4-4417-930d-6695f2a9d52b)
-    (property "Reference" "U8" (at 115.57 53.34 0)
+    (property "Reference" "U6" (at 115.57 53.34 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 115.57 55.88 0)
+    (property "Value" "74AHC125D" (at 115.57 55.88 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 115.57 60.96 0)
@@ -1878,9 +1803,6 @@
     (pin "7" (uuid 109fe293-fd2d-4205-9455-32958f7f2293))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 2)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U6") (unit 2)
         )
@@ -1891,7 +1813,7 @@
   (symbol (lib_id "power:+3.3V") (at 49.53 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b31a24ba-9d19-4d74-ab5f-1764d142e013)
-    (property "Reference" "#PWR029" (at 49.53 113.03 0)
+    (property "Reference" "#PWR021" (at 49.53 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 49.53 105.41 0)
@@ -1906,9 +1828,6 @@
     (pin "1" (uuid 185899d1-77ac-4b6d-9fc9-162fa82cfb0a))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR029") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR021") (unit 1)
         )
@@ -1919,7 +1838,7 @@
   (symbol (lib_id "power:GND") (at 64.77 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bab29dc8-ea8e-4c7a-8d0f-1c51bcc80126)
-    (property "Reference" "#PWR034" (at 64.77 147.32 0)
+    (property "Reference" "#PWR026" (at 64.77 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 64.77 146.05 0)
@@ -1934,9 +1853,6 @@
     (pin "1" (uuid 28f11e35-4d79-41fc-8c99-e38d1680e3bf))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR034") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR026") (unit 1)
         )
@@ -1947,7 +1863,7 @@
   (symbol (lib_id "power:+3.3V") (at 115.57 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bf280d2b-6bd5-4a2f-b787-089d1838394c)
-    (property "Reference" "#PWR022" (at 115.57 111.76 0)
+    (property "Reference" "#PWR027" (at 115.57 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 115.57 104.14 0)
@@ -1962,9 +1878,6 @@
     (pin "1" (uuid b8f1c1d7-0e5e-4c62-9af1-8b2ee200b6d0))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR022") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR027") (unit 1)
         )
@@ -1978,7 +1891,7 @@
     (property "Reference" "U3" (at 43.18 116.84 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "74AHCT125D" (at 50.8 116.84 0)
+    (property "Value" "74AHC125D" (at 50.8 116.84 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 49.53 125.73 0)
@@ -2003,9 +1916,6 @@
     (pin "7" (uuid bf6708b4-9388-4e48-9179-226454c465c2))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U3") (unit 5)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U3") (unit 5)
         )
@@ -2016,7 +1926,7 @@
   (symbol (lib_id "power:+3.3V") (at 64.77 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c1ecea42-df97-46b6-ad17-6244690f01e7)
-    (property "Reference" "#PWR033" (at 64.77 113.03 0)
+    (property "Reference" "#PWR025" (at 64.77 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 64.77 105.41 0)
@@ -2031,9 +1941,6 @@
     (pin "1" (uuid c42aefa5-ed38-4b50-8a83-a9fd6e57369e))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR033") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR025") (unit 1)
         )
@@ -2044,7 +1951,7 @@
   (symbol (lib_id "Device:C") (at 64.77 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c7d09a02-8b29-4f72-85cf-502ebe63e633)
-    (property "Reference" "C8" (at 68.58 125.095 0)
+    (property "Reference" "C7" (at 68.58 125.095 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 68.58 127.635 0)
@@ -2060,9 +1967,6 @@
     (pin "2" (uuid 64c0c233-a65e-4f00-b244-0dc3dd8e175c))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "C8") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "C7") (unit 1)
         )
@@ -2073,7 +1977,7 @@
   (symbol (lib_id "power:GND") (at 49.53 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ca8ff14f-dd2c-4d26-a53b-efb578fcccde)
-    (property "Reference" "#PWR028" (at 49.53 147.32 0)
+    (property "Reference" "#PWR022" (at 49.53 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 49.53 146.05 0)
@@ -2088,9 +1992,6 @@
     (pin "1" (uuid 848d3f65-393a-498a-96fd-8586f988a05a))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR028") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR022") (unit 1)
         )
@@ -2104,7 +2005,7 @@
     (property "Reference" "U3" (at 50.8 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 50.8 39.37 0)
+    (property "Value" "74AHC125D" (at 50.8 39.37 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 50.8 44.45 0)
@@ -2129,9 +2030,6 @@
     (pin "7" (uuid a8de8a78-845d-4d6b-9d25-d8fa713808be))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U3") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U3") (unit 1)
         )
@@ -2142,10 +2040,10 @@
   (symbol (lib_id "74xx:74LS125") (at 177.8 77.47 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d2b458fb-1176-499a-bb71-229428c5aec0)
-    (property "Reference" "U8" (at 177.8 69.85 0)
+    (property "Reference" "U11" (at 177.8 69.85 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 177.8 72.39 0)
+    (property "Value" "74AHC125D" (at 177.8 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 177.8 77.47 0)
@@ -2170,9 +2068,6 @@
     (pin "7" (uuid 952cac6c-07a0-450b-a278-839e3a1444ce))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 3)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U11") (unit 3)
         )
@@ -2183,7 +2078,7 @@
   (symbol (lib_id "power:GND") (at 248.92 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dbefa0c0-8054-4a04-b434-95dfe6c9cdbd)
-    (property "Reference" "#PWR048" (at 248.92 147.32 0)
+    (property "Reference" "#PWR038" (at 248.92 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 248.92 146.05 0)
@@ -2198,9 +2093,6 @@
     (pin "1" (uuid 017404de-b965-4b66-91a6-950d38cf5040))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR048") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR038") (unit 1)
         )
@@ -2211,7 +2103,7 @@
   (symbol (lib_id "power:+5V") (at 248.92 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e97fe05e-f6eb-4bad-a5d2-ba3151ce971c)
-    (property "Reference" "#PWR047" (at 248.92 111.76 0)
+    (property "Reference" "#PWR034" (at 248.92 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 248.92 104.14 0)
@@ -2226,9 +2118,6 @@
     (pin "1" (uuid e8e21649-721e-4804-85fd-2b29875c7db9))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR047") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR034") (unit 1)
         )
@@ -2242,7 +2131,7 @@
     (property "Reference" "U3" (at 50.8 53.34 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 50.8 55.88 0)
+    (property "Value" "74AHC125D" (at 50.8 55.88 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 50.8 60.96 0)
@@ -2267,9 +2156,6 @@
     (pin "7" (uuid 109fe293-fd2d-4205-9455-32958f7f2290))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U3") (unit 2)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U3") (unit 2)
         )
@@ -2280,7 +2166,7 @@
   (symbol (lib_id "power:GND") (at 264.16 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f39a9027-795f-4347-bec8-e7e1a244ee06)
-    (property "Reference" "#PWR045" (at 264.16 147.32 0)
+    (property "Reference" "#PWR046" (at 264.16 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 264.16 146.05 0)
@@ -2295,9 +2181,6 @@
     (pin "1" (uuid 2b93c121-5693-4ee0-a6ea-a6166d64ee97))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "#PWR045") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "#PWR046") (unit 1)
         )
@@ -2308,10 +2191,10 @@
   (symbol (lib_id "74xx:74LS125") (at 115.57 44.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f7eedddc-9f15-4ff1-8196-2d0f25cc3acd)
-    (property "Reference" "U8" (at 115.57 36.83 0)
+    (property "Reference" "U6" (at 115.57 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "74AHCT125D" (at 115.57 39.37 0)
+    (property "Value" "74AHC125D" (at 115.57 39.37 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 115.57 44.45 0)
@@ -2336,9 +2219,6 @@
     (pin "7" (uuid a8de8a78-845d-4d6b-9d25-d8fa713808c1))
     (instances
       (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d"
-          (reference "U8") (unit 1)
-        )
         (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/a99f2386-3ebb-4687-aeec-6bb457f5710d"
           (reference "U6") (unit 1)
         )
