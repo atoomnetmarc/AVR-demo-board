@@ -3,7 +3,7 @@ set PROGRAMMER=arduino
 set COMPORT=COM2
 
 REM chip erase
-avrdude -u -c %PROGRAMMER% -p 1200 -P %COMPORT% -b 19200 -e
+avrdude -c %PROGRAMMER% -P %COMPORT% -p 1200 -b 19200 -e
 
 REM program flash
-avrdude -u -c %PROGRAMMER% -p 1200 -P %COMPORT% -b 19200 -D -U flash:w:"%HEXFILE%":i
+avrdude -c %PROGRAMMER% -P %COMPORT% -p 1200 -b 19200 -D -U flash:w:"%HEXFILE%":i
