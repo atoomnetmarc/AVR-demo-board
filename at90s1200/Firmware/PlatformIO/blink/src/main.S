@@ -1,6 +1,6 @@
 /*
 
-Copyright 2021 Marc Ketel
+Copyright 2021-2024 Marc Ketel
 SPDX-License-Identifier: Apache-2.0
 
 */
@@ -19,13 +19,15 @@ SPDX-License-Identifier: Apache-2.0
 #define pause r16
 #define temp r22
 
-; isr starts every 32.77 ms
-#if defined (__AVR_AT90S1200__)
+; ISR starts every 32.77 ms.
+#if defined (__AVR_AT90S1200__) || defined (__AVR_ATtiny2313__)
 .global TIMER0_OVF_vect
 TIMER0_OVF_vect:
 #elif defined (__AVR_AT90S2313__)
 .global TIMER0_OVF0_vect
 TIMER0_OVF0_vect:
+#else
+    #error Unknown MCU
 #endif
 
     in S, _SFR_IO_ADDR(SREG)
@@ -36,21 +38,38 @@ TIMER0_OVF0_vect:
 .global main
 main:
 
-#if defined (__AVR_AT90S2313__)
-    ;initialize stack pointer
-    ldi r16, lo8(RAMEND)
-    out _SFR_IO_ADDR(SPL), r16
+#if defined (SP)
+    ; Initialize stack pointer.
+    ldi temp, lo8(RAMEND)
+    out _SFR_IO_ADDR(SP), temp
 #endif
 
-    ldi temp, (1<<CS02) | (1<<CS00) ; Timer clock = system clock / 1024
+#if defined (__AVR_ATtiny2313__)
+    ; Configure clkdiv = 1
+    ldi temp, _BV(CLKPCE)
+    out _SFR_IO_ADDR(CLKPR), temp
+    clr temp
+    out _SFR_IO_ADDR(CLKPR), temp
+#endif
+
+    ; Timer clock = system clock / 1024
+    ldi temp, _BV(CS02) | _BV(CS00)
+#if defined (__AVR_AT90S1200__) || defined (__AVR_AT90S2313__)
     out _SFR_IO_ADDR(TCCR0), temp
-    ldi temp, 1<<TOV0
-    out _SFR_IO_ADDR(TIFR), temp ; Clear TOV0/ clear pending interrupts
+#elif defined (__AVR_ATtiny2313__)
+    out _SFR_IO_ADDR(TCCR0B), temp
+#endif
 
-    ldi temp, 1<<TOIE0
-    out _SFR_IO_ADDR(TIMSK), temp ; Enable Timer/Counter0 Overflow Interrupt
+    ; Clear TOV0/ clear pending interrupts.
+    ldi temp, _BV(TOV0)
+    out _SFR_IO_ADDR(TIFR), temp
 
-    ldi temp, (1<<led1r)|(1<<led1g)|(1<<led1b)|(1<<led2r)|(1<<led2g)|(1<<led2b)
+    ; Enable Timer/Counter0 Overflow Interrupt.
+    ldi temp, _BV(TOIE0)
+    out _SFR_IO_ADDR(TIMSK), temp
+
+    ; Many pins output.
+    ldi temp, _BV(led1r) | _BV(led1g) | _BV(led1b) | _BV(led2r) | _BV(led2g) | _BV(led2b)
     out _SFR_IO_ADDR(DDRB), temp
 
     sei
