@@ -44,7 +44,7 @@ AVRDUDE 6.3 is unable to program the AT90S2323 because it wrongly assumes this c
 
 Use the ancient [AVR Studio v4.19.730](https://www.microchip.com/mplab/avr-support/avr-and-sam-downloads-archive) to compile programs for the old AT90S* AVR's.
 
-To compile c-programs you can still use [WinAVR-20100110-install.exe](https://sourceforge.net/projects/winavr/files/WinAVR/20100110/) containing ~~an old~~ a mature GCC compiler versioned 4.3, but you need some to [fix some incompatibilities with Windows 10](https://www.avrfreaks.net/forum/windows-81-compilation-error?page=all) in order to make it work.\
+To compile c-programs you can still use [WinAVR-20100110-install.exe](https://sourceforge.net/projects/winavr/files/WinAVR/20100110/) containing ~~an old~~ a mature GCC compiler versioned 4.3, but you need some to [fix some incompatibilities with Windows 10](https://www.avrfreaks.net/s/topic/a5C3l000000USrIEAW/t124726) in order to make it work.\
 There is a simpler solution, just use an [updated GCC](https://blog.zakkemble.net/avr-gcc-builds/). This update contains GCC version 12 and works to compile programs for the old AT90S* chips in AVR Studio 4.19.
 
 ## Visual Studio Code + PlatformIO
