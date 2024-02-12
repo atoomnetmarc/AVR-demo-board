@@ -1,0 +1,12 @@
+hex/*.lss
+
+## Ignore Platformio and vscode
+.pio
+.vscode
+
+## Ignore Microchip Studio
+[Dd]ebug/
+[Rr]elease/
+.vs/
+*.cppproj
+*.componentinfo.xml

@@ -38,12 +38,6 @@ TIMER0_OVF0_vect:
 .global main
 main:
 
-#if defined (SP)
-    ; Initialize stack pointer.
-    ldi temp, lo8(RAMEND)
-    out _SFR_IO_ADDR(SP), temp
-#endif
-
 #if defined (__AVR_ATtiny2313__)
     ; Configure clkdiv = 1
     ldi temp, _BV(CLKPCE)
