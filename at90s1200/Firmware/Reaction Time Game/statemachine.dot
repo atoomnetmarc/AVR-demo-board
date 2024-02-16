@@ -1,0 +1,47 @@
+digraph finite_state_machine {
+    node [shape = point ]; RESET
+    node [shape = circle];
+    rankdir=LR;
+
+    RESET -> start [label = "reset"];
+
+    start [label = <start<br/>LED1=blue<br />LED2=blue<br />timer=rand(1, 5)s> ]
+    start -> wait;
+
+    wait [label = <wait<br/>timer-->]
+    wait -> wait [label = "timer>0"]
+    wait -> led_change [label = "timer==0"]
+    wait -> win_player1 [label = <button2==1>];
+    wait -> win_player2 [label = <button1==1>];
+    wait -> win_nobody [label = <button1==1<br/>button2==1>];
+
+    led_change [label = <led_change<br/>LED1=off<br/>LED2=off<br/>timer=5s>]
+    led_change -> player_wait;
+
+    player_wait [label = <player_wait<br/>timer-->]
+    player_wait -> player_wait [label = "timer>0"]
+    player_wait -> win_nobody [label = "timer==0"];
+
+    player_wait -> win_player1 [label = <button1==1>];
+    player_wait -> win_player2 [label = <button2==1>];
+    player_wait -> win_both [label = <button1==1<br/>button2==1>];
+
+    win_player1 [label = <win_player1<br/>LED1=green<br/>LED2=red>]
+    win_player1 -> end;
+
+    win_player2 [label = <win_player2<br/>LED1=red<br/>LED2=green>]
+    win_player2 -> end;
+
+    win_both [label = <win_both<br/>win_player1<br/>LED1=green<br/>LED2=green>]
+    win_both -> end;
+
+    win_nobody [label = <win_nobody<br/>LED1=red<br/>LED2=red>]
+    win_nobody -> end;
+
+    end [label = <end<br/>timer=2>]
+    end -> end_wait;
+
+    end_wait [label = <end_wait<br/>timer-->]
+    end_wait -> end_wait [label = "timer>0"]
+    end_wait -> start [label = "timer==0"]
+}

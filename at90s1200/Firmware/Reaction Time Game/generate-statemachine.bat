@@ -1,0 +1,1 @@
+dot statemachine.dot -Tsvg > statemachine.svg
