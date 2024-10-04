@@ -1,733 +1,2030 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid 2841fc82-d56e-469d-835b-952a585831a4)
-
-  (paper "A4")
-
-  (title_block
-    (title "AT90S8535 demo board")
-    (date "2023-04-01")
-    (rev "V1.0")
-    (company "https://github.com/atoomnetmarc/AVR-demo-board")
-    (comment 1 "Apache License, version 2.0")
-  )
-
-  (lib_symbols
-    (symbol "Connector-extra:Pmod-host-spi" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at -6.985 11.43 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "Pmod host SPI" (at 0.635 11.43 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_1x06_P2.54mm_Horizontal" (at 0 -15.24 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "https://digilent.com/reference/pmod/start" (at -1.27 -17.78 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "pmod" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Pmod Interface Type 2 (SPI) host" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "Pmod-host-spi_0_1"
-        (rectangle (start -7.62 10.16) (end 7.62 -10.16)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-      )
-      (symbol "Pmod-host-spi_1_1"
-        (pin input line (at -10.16 3.81 0) (length 2.54)
-          (name "~{CS}" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 1.27 0) (length 2.54)
-          (name "MOSI" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -10.16 -1.27 0) (length 2.54)
-          (name "MISO" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 -3.81 0) (length 2.54)
-          (name "SCK" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 -12.7 90) (length 2.54)
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 12.7 270) (length 2.54)
-          (name "VCC" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Connector-extra:Pmod-host-spi-expanded" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at -7.62 16.51 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "Pmod host SPI" (at 0.635 16.51 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_2x06_P2.54mm_Horizontal_Top_Bottom" (at 0 -22.86 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "https://digilent.com/reference/pmod/start" (at -1.27 -25.4 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "pmod" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Pmod Interface Type 2A (expanded SPI) host" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "Pmod-host-spi-expanded_0_1"
-        (rectangle (start -8.89 15.24) (end 8.89 -15.24)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-      )
-      (symbol "Pmod-host-spi-expanded_1_1"
-        (pin input line (at -11.43 8.89 0) (length 2.54)
-          (name "~{CS}" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at -11.43 -8.89 0) (length 2.54)
-          (name "GPIO/~{CS3}" (effects (font (size 1.27 1.27))))
-          (number "10" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -17.78 90) (length 2.54) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "11" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 17.78 270) (length 2.54) hide
-          (name "VCC" (effects (font (size 1.27 1.27))))
-          (number "12" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -11.43 6.35 0) (length 2.54)
-          (name "MOSI" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -11.43 3.81 0) (length 2.54)
-          (name "MISO" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -11.43 1.27 0) (length 2.54)
-          (name "SCK" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 -17.78 90) (length 2.54)
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 17.78 270) (length 2.54)
-          (name "VCC" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at -11.43 -1.27 0) (length 2.54)
-          (name "GPIO/~{INT}" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at -11.43 -3.81 0) (length 2.54)
-          (name "GPIO/~{RESET}" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at -11.43 -6.35 0) (length 2.54)
-          (name "GPIO/~{CS2}" (effects (font (size 1.27 1.27))))
-          (number "9" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+3.3V" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+3.3V\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+3.3V_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+3.3V_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3.3V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GND" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GND_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-
-  (wire (pts (xy 128.27 36.83) (xy 128.27 43.18))
-    (stroke (width 0) (type default))
-    (uuid 074519b1-8a59-44ac-97b8-83ab8a9ca307)
-  )
-  (wire (pts (xy 71.12 115.57) (xy 77.47 115.57))
-    (stroke (width 0) (type default))
-    (uuid 0a29cbc0-0132-471f-a379-a838189cf65c)
-  )
-  (wire (pts (xy 71.12 120.65) (xy 77.47 120.65))
-    (stroke (width 0) (type default))
-    (uuid 166484d1-a631-4120-bb36-9b568877f235)
-  )
-  (wire (pts (xy 71.12 118.11) (xy 77.47 118.11))
-    (stroke (width 0) (type default))
-    (uuid 2dc40d3d-3313-4d9e-a72f-cfe13f906621)
-  )
-  (wire (pts (xy 111.76 57.15) (xy 118.11 57.15))
-    (stroke (width 0) (type default))
-    (uuid 4b6a817d-96dc-4798-a3e6-0988f5d62e84)
-  )
-  (wire (pts (xy 88.9 87.63) (xy 88.9 93.98))
-    (stroke (width 0) (type default))
-    (uuid 4f6d50b3-305e-4a3e-901e-c47ad100b306)
-  )
-  (wire (pts (xy 128.27 68.58) (xy 128.27 74.93))
-    (stroke (width 0) (type default))
-    (uuid 534069d8-86cd-42fb-ae2c-0facf59452f4)
-  )
-  (wire (pts (xy 71.12 110.49) (xy 77.47 110.49))
-    (stroke (width 0) (type default))
-    (uuid 57500819-2e35-4430-a19c-6a683fd7cea5)
-  )
-  (wire (pts (xy 58.42 36.83) (xy 58.42 43.18))
-    (stroke (width 0) (type default))
-    (uuid 5a2285bf-2130-4ff3-80f0-67a5384d94d9)
-  )
-  (wire (pts (xy 71.12 102.87) (xy 77.47 102.87))
-    (stroke (width 0) (type default))
-    (uuid 5ccbb286-a72a-403b-922c-4c31c058de4b)
-  )
-  (wire (pts (xy 71.12 113.03) (xy 77.47 113.03))
-    (stroke (width 0) (type default))
-    (uuid 857b695e-cc87-4012-aee5-261fc4219c55)
-  )
-  (wire (pts (xy 41.91 54.61) (xy 48.26 54.61))
-    (stroke (width 0) (type default))
-    (uuid 863384a6-f2fd-4548-b1f5-8d679c91abe9)
-  )
-  (wire (pts (xy 88.9 129.54) (xy 88.9 135.89))
-    (stroke (width 0) (type default))
-    (uuid 9b66d020-9932-462c-9a29-a5ffc6dcb7e4)
-  )
-  (wire (pts (xy 71.12 105.41) (xy 77.47 105.41))
-    (stroke (width 0) (type default))
-    (uuid aa2a87b4-a8d4-4f64-a36f-0d6e9d2324f8)
-  )
-  (wire (pts (xy 111.76 54.61) (xy 118.11 54.61))
-    (stroke (width 0) (type default))
-    (uuid b91f8dfb-b842-48c4-a89d-5eaa67d1d469)
-  )
-  (wire (pts (xy 71.12 107.95) (xy 77.47 107.95))
-    (stroke (width 0) (type default))
-    (uuid b924c6a3-f6e6-4bfa-831a-0567652175d2)
-  )
-  (wire (pts (xy 58.42 68.58) (xy 58.42 74.93))
-    (stroke (width 0) (type default))
-    (uuid c387e392-c4de-4f89-bb30-7fea9829626e)
-  )
-  (wire (pts (xy 41.91 59.69) (xy 48.26 59.69))
-    (stroke (width 0) (type default))
-    (uuid ca5d0212-526d-400a-b3d5-a6a9f05a96dc)
-  )
-  (wire (pts (xy 111.76 52.07) (xy 118.11 52.07))
-    (stroke (width 0) (type default))
-    (uuid d279bf1f-8c75-420d-987a-714615c7c3e6)
-  )
-  (wire (pts (xy 41.91 57.15) (xy 48.26 57.15))
-    (stroke (width 0) (type default))
-    (uuid d3c10b63-6a81-4087-a8ae-f603f62b3e69)
-  )
-  (wire (pts (xy 41.91 52.07) (xy 48.26 52.07))
-    (stroke (width 0) (type default))
-    (uuid d51c55ef-0e04-47cb-a033-25867345450f)
-  )
-  (wire (pts (xy 111.76 59.69) (xy 118.11 59.69))
-    (stroke (width 0) (type default))
-    (uuid ebe62a5e-cf69-4380-95a5-abe8bd1a28c6)
-  )
-
-  (rectangle (start 16.51 16.51) (end 166.37 148.59)
-    (stroke (width 0) (type default))
-    (fill (type none))
-    (uuid 33bf7413-a084-4b67-802b-a2bd2b9adbcf)
-  )
-
-  (text "Hardware SPI when \n>= ATmega8535 and\nusing USART in SPI mode."
-    (at 24.13 41.91 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 3cd9840b-d28c-4b38-94a8-bebdf4b4a937)
-  )
-  (text "3.3V IO connectors." (at 19.05 22.86 0)
-    (effects (font (size 3 3)) (justify left bottom))
-    (uuid 4f12008e-4c7b-4b4a-b45b-7bdde549c54a)
-  )
-  (text "Suggested use: \nSPI RAM." (at 24.13 48.26 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 6520b278-728f-4ef7-9b2e-67fbc01ccd68)
-  )
-  (text "These have PMOD pinouts and work on 3.3V." (at 19.05 25.4 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 8d63c529-fa48-4ecb-b4dd-0a7ed0978847)
-  )
-  (text "Suggested use: \nTFT display with SD card." (at 53.34 99.06 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid c6af1ae3-f8b0-4540-bd2d-70003c6fbe21)
-  )
-  (text "Suggested use:\nSPI Flash." (at 91.44 48.26 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid f293bf3a-0637-4bac-95f8-1863b6ab2250)
-  )
-
-  (global_label "MOSI_3V" (shape input) (at 111.76 54.61 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 0c0c99ff-653f-42c7-9988-e8d084e75b61)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 100.9923 54.61 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "MOSI_3V" (shape input) (at 71.12 105.41 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 1a08002b-0392-4a77-90be-279d5becaa86)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 60.3523 105.41 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "SCK_3V" (shape input) (at 71.12 110.49 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 2c5d14f2-3c37-457f-a878-a0a139e4d6dd)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 61.199 110.49 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PA6(FLASH_~{CS})_3V" (shape input) (at 111.76 52.07 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 3b55fc1e-7647-49d8-8b2c-834c3b685a2f)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 96.3961 52.07 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PD4(SCK2)_3V" (shape input) (at 41.91 59.69 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 4142839f-02c2-447c-8c35-ea9e0ab132e7)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 30.7795 59.69 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PA5(SD_~{CS})_3V" (shape input) (at 71.12 118.11 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 703a5a50-36a5-4e89-8de0-7f23168f3078)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 59.0219 118.11 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PB1(RAM_~{CS})_3V" (shape input) (at 41.91 52.07 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid a7b508bc-197d-4361-9b2e-6135599cdce4)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 28.4814 52.07 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PB3(TFT_BL)_3V" (shape input) (at 71.12 120.65 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid ae83bb83-90f2-4734-a3bf-16ef6f3ea89a)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 53.2161 120.65 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PC7(TFT_~{RST})_3V" (shape input) (at 71.12 115.57 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid b2e82ffe-c660-4401-8726-62da585132bb)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 57.51 115.57 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "MISO_3V" (shape output) (at 71.12 107.95 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid d8ac96f3-b4dc-400b-9508-88bed9ef4365)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 60.3523 107.95 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PC6(TFT_D~{C})_3V" (shape input) (at 71.12 113.03 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid d8effb27-4bf7-4abd-a79b-bbaf8d325e56)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 58.4171 113.03 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PD2(MISO2)_3V" (shape output) (at 41.91 57.15 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid db270936-d1f7-4d61-8507-e1208df8b679)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 29.9328 57.15 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "SCK_3V" (shape input) (at 111.76 59.69 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid de51f507-1983-4c5d-b43c-015104e9c14f)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 101.839 59.69 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PA7(TFT_~{CS})_3V" (shape input) (at 71.12 102.87 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid e09a7466-5d01-4f89-b20e-320ad54c1251)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 58.4776 102.87 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PD3(MOSI2)_3V" (shape input) (at 41.91 54.61 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid f1cbd640-2e77-4c75-8de1-7da4e044f6f7)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 29.9328 54.61 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "MISO_3V" (shape output) (at 111.76 57.15 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid f7bb9767-846f-4aa4-a586-1a504d9d2986)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 100.9923 57.15 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 88.9 87.63 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 2d4c0fa8-3649-4c3f-a190-104df880b344)
-    (property "Reference" "#PWR019" (at 88.9 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 88.9 83.82 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 88.9 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 88.9 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d6ec0f5a-98c6-45d8-a851-fb926b7d6ff8))
-    (instances
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "#PWR019") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 58.42 74.93 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 331ee15a-4b20-4868-83d9-b785ef872be0)
-    (property "Reference" "#PWR011" (at 58.42 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 58.547 79.3242 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 58.42 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 58.42 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid acdcf226-7253-4110-9991-199c5cf6f23e))
-    (instances
-      (project "IoT12 Control Board"
-        (path "/2454fd1b-3484-4838-8b7e-d26357238fe1/00000000-0000-0000-0000-000060488463"
-          (reference "#PWR011") (unit 1)
-        )
-      )
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "#PWR024") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Connector-extra:Pmod-host-spi") (at 128.27 55.88 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6186d8d1-5fb1-4e04-9c8a-e225f68bfa6e)
-    (property "Reference" "J9" (at 137.16 55.245 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "Pmod host SPI" (at 137.16 57.785 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_1x06_P2.54mm_Horizontal" (at 128.27 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://digilent.com/reference/pmod/start" (at 127 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ba448887-7498-4725-812c-60f5850b745a))
-    (pin "2" (uuid 5634c408-7030-4ae0-a9f1-fba81350e616))
-    (pin "3" (uuid d4f94f42-4406-4b61-ae1d-6177f2de14d6))
-    (pin "4" (uuid 61b1211e-0431-41db-a922-af424ef578f4))
-    (pin "5" (uuid 13c63240-e381-424b-860b-7e5b4420c0c9))
-    (pin "6" (uuid d9985ae9-3f75-47b1-b0fb-c917355c4f6e))
-    (instances
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "J9") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 58.42 36.83 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 6453c6ef-4dd6-4c51-a93b-a3aaf564242e)
-    (property "Reference" "#PWR042" (at 58.42 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 58.42 33.02 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 58.42 36.83 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 58.42 36.83 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 57e707c9-544a-4eb5-a069-25f2a4ed02e3))
-    (instances
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "#PWR042") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Connector-extra:Pmod-host-spi-expanded") (at 88.9 111.76 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid a6ef1e48-b318-462e-baa2-e62f8dc1f145)
-    (property "Reference" "J10" (at 99.06 111.125 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "Pmod host SPI" (at 99.06 113.665 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_2x06_P2.54mm_Horizontal_Top_Bottom" (at 88.9 134.62 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://digilent.com/reference/pmod/start" (at 87.63 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 504db5e1-8a2b-4b6b-8d4b-f79e55d8c88b))
-    (pin "10" (uuid d9db7e63-7154-4083-bc2f-ce1c480539f4))
-    (pin "11" (uuid 3da30940-8fff-4ff9-a7d4-3eadbd1d7770))
-    (pin "12" (uuid 75b3539c-cce6-4039-8460-581407c4fbb7))
-    (pin "2" (uuid 0761fe9a-23f4-4422-b567-b88e61cada29))
-    (pin "3" (uuid 4223cc0f-f212-4313-9ff5-ae6e0e21114e))
-    (pin "4" (uuid ce5f770c-69c2-4cb4-b3a3-8b616e6feab8))
-    (pin "5" (uuid fa798f00-7488-408b-b489-c69502d0fe69))
-    (pin "6" (uuid d3a5bca3-7a97-45a5-9ad2-79eae2e6e9f7))
-    (pin "7" (uuid 532cdbcd-287a-4dc7-a827-b609f7ed6e27))
-    (pin "8" (uuid 7820ad76-c1d8-4b66-8d72-c4f65944bdd7))
-    (pin "9" (uuid fb1c1e66-fb15-4831-8aa1-3a4a38f921b7))
-    (instances
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "J10") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 128.27 74.93 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid a9083a5f-d995-4a27-8252-4c8ff3930a79)
-    (property "Reference" "#PWR011" (at 128.27 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 128.397 79.3242 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 128.27 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 128.27 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4ba0731a-e702-456f-afe1-e338021c10d8))
-    (instances
-      (project "IoT12 Control Board"
-        (path "/2454fd1b-3484-4838-8b7e-d26357238fe1/00000000-0000-0000-0000-000060488463"
-          (reference "#PWR011") (unit 1)
-        )
-      )
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "#PWR031") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 128.27 36.83 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c9b032b3-a04c-48e5-b6b8-388d63c9541b)
-    (property "Reference" "#PWR023" (at 128.27 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 128.27 33.02 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 128.27 36.83 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 128.27 36.83 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid cde070f7-5d45-4c08-988e-98ae1512a7d9))
-    (instances
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "#PWR023") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 88.9 135.89 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid e78ee873-db22-48c3-825e-2f7e7d89fc52)
-    (property "Reference" "#PWR011" (at 88.9 142.24 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 89.027 140.2842 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 88.9 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 88.9 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0dc8982e-f1a5-4b40-897a-1a363a338d2f))
-    (instances
-      (project "IoT12 Control Board"
-        (path "/2454fd1b-3484-4838-8b7e-d26357238fe1/00000000-0000-0000-0000-000060488463"
-          (reference "#PWR011") (unit 1)
-        )
-      )
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "#PWR018") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Connector-extra:Pmod-host-spi") (at 58.42 55.88 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid fba14f32-0e49-416f-9814-7953276fdb45)
-    (property "Reference" "J5" (at 67.31 55.245 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "Pmod host SPI" (at 67.31 57.785 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_1x06_P2.54mm_Horizontal" (at 58.42 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://digilent.com/reference/pmod/start" (at 57.15 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6e348f4f-9b6f-4516-baa5-260e595e46c2))
-    (pin "2" (uuid 140fec07-2788-42b4-881f-d35db604e770))
-    (pin "3" (uuid 41ae1b3e-9875-49e8-9702-84fb7de5ff80))
-    (pin "4" (uuid 5b0044aa-c1ab-4c7b-928f-412fc62349ba))
-    (pin "5" (uuid 99f8af4e-d9e6-4204-8e5f-2e08a9423044))
-    (pin "6" (uuid 1e121f1c-5b9c-4c31-8560-5d65f7e4a81d))
-    (instances
-      (project "at90s8535"
-        (path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
-          (reference "J5") (unit 1)
-        )
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "2841fc82-d56e-469d-835b-952a585831a4")
+	(paper "A4")
+	(title_block
+		(title "AT90S8535 demo board")
+		(date "2023-04-01")
+		(rev "V1.0")
+		(company "https://github.com/atoomnetmarc/AVR-demo-board")
+		(comment 1 "Apache License, version 2.0")
+	)
+	(lib_symbols
+		(symbol "Connector-extra:Pmod-host-spi"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -6.985 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Pmod host SPI"
+				(at 0.635 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_1x06_P2.54mm_Horizontal"
+				(at 0 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://digilent.com/reference/pmod/start"
+				(at -1.27 -17.78 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Pmod Interface Type 2 (SPI) host"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "pmod"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Pmod-host-spi_0_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 7.62 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Pmod-host-spi_1_1"
+				(pin input line
+					(at -10.16 3.81 0)
+					(length 2.54)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 1.27 0)
+					(length 2.54)
+					(name "MOSI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -1.27 0)
+					(length 2.54)
+					(name "MISO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -3.81 0)
+					(length 2.54)
+					(name "SCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Connector-extra:Pmod-host-spi-expanded"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -7.62 16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Pmod host SPI"
+				(at 0.635 16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_2x06_P2.54mm_Horizontal_Top_Bottom"
+				(at 0 -22.86 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://digilent.com/reference/pmod/start"
+				(at -1.27 -25.4 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Pmod Interface Type 2A (expanded SPI) host"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "pmod"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Pmod-host-spi-expanded_0_1"
+				(rectangle
+					(start -8.89 15.24)
+					(end 8.89 -15.24)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Pmod-host-spi-expanded_1_1"
+				(pin input line
+					(at -11.43 8.89 0)
+					(length 2.54)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 -8.89 0)
+					(length 2.54)
+					(name "GPIO/~{CS3}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -17.78 90)
+					(length 2.54) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 17.78 270)
+					(length 2.54) hide
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 6.35 0)
+					(length 2.54)
+					(name "MOSI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -11.43 3.81 0)
+					(length 2.54)
+					(name "MISO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 1.27 0)
+					(length 2.54)
+					(name "SCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -17.78 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 17.78 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 -1.27 0)
+					(length 2.54)
+					(name "GPIO/~{INT}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 -3.81 0)
+					(length 2.54)
+					(name "GPIO/~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 -6.35 0)
+					(length 2.54)
+					(name "GPIO/~{CS2}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+3.3V"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3.3V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3.3V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0) hide
+					(name "+3.3V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 128.27 36.83) (xy 128.27 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "074519b1-8a59-44ac-97b8-83ab8a9ca307")
+	)
+	(wire
+		(pts
+			(xy 71.12 115.57) (xy 77.47 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a29cbc0-0132-471f-a379-a838189cf65c")
+	)
+	(wire
+		(pts
+			(xy 71.12 120.65) (xy 77.47 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "166484d1-a631-4120-bb36-9b568877f235")
+	)
+	(wire
+		(pts
+			(xy 71.12 118.11) (xy 77.47 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dc40d3d-3313-4d9e-a72f-cfe13f906621")
+	)
+	(wire
+		(pts
+			(xy 111.76 57.15) (xy 118.11 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b6a817d-96dc-4798-a3e6-0988f5d62e84")
+	)
+	(wire
+		(pts
+			(xy 88.9 87.63) (xy 88.9 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f6d50b3-305e-4a3e-901e-c47ad100b306")
+	)
+	(wire
+		(pts
+			(xy 128.27 68.58) (xy 128.27 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "534069d8-86cd-42fb-ae2c-0facf59452f4")
+	)
+	(wire
+		(pts
+			(xy 71.12 110.49) (xy 77.47 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57500819-2e35-4430-a19c-6a683fd7cea5")
+	)
+	(wire
+		(pts
+			(xy 58.42 36.83) (xy 58.42 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a2285bf-2130-4ff3-80f0-67a5384d94d9")
+	)
+	(wire
+		(pts
+			(xy 71.12 102.87) (xy 77.47 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ccbb286-a72a-403b-922c-4c31c058de4b")
+	)
+	(wire
+		(pts
+			(xy 71.12 113.03) (xy 77.47 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "857b695e-cc87-4012-aee5-261fc4219c55")
+	)
+	(wire
+		(pts
+			(xy 41.91 54.61) (xy 48.26 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "863384a6-f2fd-4548-b1f5-8d679c91abe9")
+	)
+	(wire
+		(pts
+			(xy 88.9 129.54) (xy 88.9 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b66d020-9932-462c-9a29-a5ffc6dcb7e4")
+	)
+	(wire
+		(pts
+			(xy 71.12 105.41) (xy 77.47 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa2a87b4-a8d4-4f64-a36f-0d6e9d2324f8")
+	)
+	(wire
+		(pts
+			(xy 111.76 54.61) (xy 118.11 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b91f8dfb-b842-48c4-a89d-5eaa67d1d469")
+	)
+	(wire
+		(pts
+			(xy 71.12 107.95) (xy 77.47 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b924c6a3-f6e6-4bfa-831a-0567652175d2")
+	)
+	(wire
+		(pts
+			(xy 58.42 68.58) (xy 58.42 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c387e392-c4de-4f89-bb30-7fea9829626e")
+	)
+	(wire
+		(pts
+			(xy 41.91 59.69) (xy 48.26 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca5d0212-526d-400a-b3d5-a6a9f05a96dc")
+	)
+	(wire
+		(pts
+			(xy 111.76 52.07) (xy 118.11 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d279bf1f-8c75-420d-987a-714615c7c3e6")
+	)
+	(wire
+		(pts
+			(xy 41.91 57.15) (xy 48.26 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3c10b63-6a81-4087-a8ae-f603f62b3e69")
+	)
+	(wire
+		(pts
+			(xy 41.91 52.07) (xy 48.26 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d51c55ef-0e04-47cb-a033-25867345450f")
+	)
+	(wire
+		(pts
+			(xy 111.76 59.69) (xy 118.11 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebe62a5e-cf69-4380-95a5-abe8bd1a28c6")
+	)
+	(rectangle
+		(start 16.51 16.51)
+		(end 166.37 148.59)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 33bf7413-a084-4b67-802b-a2bd2b9adbcf)
+	)
+	(text "Hardware SPI when \n>= ATmega8535 and\nusing USART in SPI mode."
+		(exclude_from_sim no)
+		(at 24.13 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3cd9840b-d28c-4b38-94a8-bebdf4b4a937")
+	)
+	(text "3.3V IO connectors."
+		(exclude_from_sim no)
+		(at 19.05 22.86 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify left bottom)
+		)
+		(uuid "4f12008e-4c7b-4b4a-b45b-7bdde549c54a")
+	)
+	(text "Suggested use: \nSPI RAM."
+		(exclude_from_sim no)
+		(at 24.13 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6520b278-728f-4ef7-9b2e-67fbc01ccd68")
+	)
+	(text "These have PMOD pinouts and work on 3.3V."
+		(exclude_from_sim no)
+		(at 19.05 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8d63c529-fa48-4ecb-b4dd-0a7ed0978847")
+	)
+	(text "Suggested use: \nTFT display with SD card."
+		(exclude_from_sim no)
+		(at 53.34 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c6af1ae3-f8b0-4540-bd2d-70003c6fbe21")
+	)
+	(text "Suggested use:\nSPI Flash."
+		(exclude_from_sim no)
+		(at 91.44 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f293bf3a-0637-4bac-95f8-1863b6ab2250")
+	)
+	(global_label "MOSI_3V"
+		(shape input)
+		(at 111.76 54.61 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0c0c99ff-653f-42c7-9988-e8d084e75b61")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 100.9923 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MOSI_3V"
+		(shape input)
+		(at 71.12 105.41 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1a08002b-0392-4a77-90be-279d5becaa86")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60.3523 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SCK_3V"
+		(shape input)
+		(at 71.12 110.49 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2c5d14f2-3c37-457f-a878-a0a139e4d6dd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 61.199 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PA6(FLASH_~{CS})_3V"
+		(shape input)
+		(at 111.76 52.07 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3b55fc1e-7647-49d8-8b2c-834c3b685a2f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 96.3961 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PD4(SCK2)_3V"
+		(shape input)
+		(at 41.91 59.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4142839f-02c2-447c-8c35-ea9e0ab132e7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 30.7795 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PA5(SD_~{CS})_3V"
+		(shape input)
+		(at 71.12 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "703a5a50-36a5-4e89-8de0-7f23168f3078")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 59.0219 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PB1(RAM_~{CS})_3V"
+		(shape input)
+		(at 41.91 52.07 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a7b508bc-197d-4361-9b2e-6135599cdce4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 28.4814 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PB3(TFT_BL)_3V"
+		(shape input)
+		(at 71.12 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ae83bb83-90f2-4734-a3bf-16ef6f3ea89a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 53.2161 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PC7(TFT_~{RST})_3V"
+		(shape input)
+		(at 71.12 115.57 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b2e82ffe-c660-4401-8726-62da585132bb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.51 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MISO_3V"
+		(shape output)
+		(at 71.12 107.95 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d8ac96f3-b4dc-400b-9508-88bed9ef4365")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60.3523 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PC6(TFT_D~{C})_3V"
+		(shape input)
+		(at 71.12 113.03 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d8effb27-4bf7-4abd-a79b-bbaf8d325e56")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 58.4171 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PD2(MISO2)_3V"
+		(shape output)
+		(at 41.91 57.15 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "db270936-d1f7-4d61-8507-e1208df8b679")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 29.9328 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SCK_3V"
+		(shape input)
+		(at 111.76 59.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "de51f507-1983-4c5d-b43c-015104e9c14f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.839 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PA7(TFT_~{CS})_3V"
+		(shape input)
+		(at 71.12 102.87 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e09a7466-5d01-4f89-b20e-320ad54c1251")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 58.4776 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PD3(MOSI2)_3V"
+		(shape input)
+		(at 41.91 54.61 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f1cbd640-2e77-4c75-8de1-7da4e044f6f7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 29.9328 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MISO_3V"
+		(shape output)
+		(at 111.76 57.15 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f7bb9767-846f-4aa4-a586-1a504d9d2986")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 100.9923 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 88.9 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2d4c0fa8-3649-4c3f-a190-104df880b344")
+		(property "Reference" "#PWR019"
+			(at 88.9 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 88.9 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d6ec0f5a-98c6-45d8-a851-fb926b7d6ff8")
+		)
+		(instances
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 58.42 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "331ee15a-4b20-4868-83d9-b785ef872be0")
+		(property "Reference" "#PWR011"
+			(at 58.42 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 58.547 79.3242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 58.42 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "acdcf226-7253-4110-9991-199c5cf6f23e")
+		)
+		(instances
+			(project "IoT12 Control Board"
+				(path "/2454fd1b-3484-4838-8b7e-d26357238fe1/00000000-0000-0000-0000-000060488463"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector-extra:Pmod-host-spi")
+		(at 128.27 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6186d8d1-5fb1-4e04-9c8a-e225f68bfa6e")
+		(property "Reference" "J9"
+			(at 137.16 55.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Pmod host SPI"
+			(at 137.16 57.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_1x06_P2.54mm_Horizontal"
+			(at 128.27 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://digilent.com/reference/pmod/start"
+			(at 127 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba448887-7498-4725-812c-60f5850b745a")
+		)
+		(pin "2"
+			(uuid "5634c408-7030-4ae0-a9f1-fba81350e616")
+		)
+		(pin "3"
+			(uuid "d4f94f42-4406-4b61-ae1d-6177f2de14d6")
+		)
+		(pin "4"
+			(uuid "61b1211e-0431-41db-a922-af424ef578f4")
+		)
+		(pin "5"
+			(uuid "13c63240-e381-424b-860b-7e5b4420c0c9")
+		)
+		(pin "6"
+			(uuid "d9985ae9-3f75-47b1-b0fb-c917355c4f6e")
+		)
+		(instances
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 58.42 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6453c6ef-4dd6-4c51-a93b-a3aaf564242e")
+		(property "Reference" "#PWR042"
+			(at 58.42 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 58.42 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "57e707c9-544a-4eb5-a069-25f2a4ed02e3")
+		)
+		(instances
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector-extra:Pmod-host-spi-expanded")
+		(at 88.9 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a6ef1e48-b318-462e-baa2-e62f8dc1f145")
+		(property "Reference" "J10"
+			(at 99.06 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Pmod host SPI"
+			(at 99.06 113.665 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_2x06_P2.54mm_Horizontal_Top_Bottom"
+			(at 88.9 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://digilent.com/reference/pmod/start"
+			(at 87.63 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "504db5e1-8a2b-4b6b-8d4b-f79e55d8c88b")
+		)
+		(pin "10"
+			(uuid "d9db7e63-7154-4083-bc2f-ce1c480539f4")
+		)
+		(pin "11"
+			(uuid "3da30940-8fff-4ff9-a7d4-3eadbd1d7770")
+		)
+		(pin "12"
+			(uuid "75b3539c-cce6-4039-8460-581407c4fbb7")
+		)
+		(pin "2"
+			(uuid "0761fe9a-23f4-4422-b567-b88e61cada29")
+		)
+		(pin "3"
+			(uuid "4223cc0f-f212-4313-9ff5-ae6e0e21114e")
+		)
+		(pin "4"
+			(uuid "ce5f770c-69c2-4cb4-b3a3-8b616e6feab8")
+		)
+		(pin "5"
+			(uuid "fa798f00-7488-408b-b489-c69502d0fe69")
+		)
+		(pin "6"
+			(uuid "d3a5bca3-7a97-45a5-9ad2-79eae2e6e9f7")
+		)
+		(pin "7"
+			(uuid "532cdbcd-287a-4dc7-a827-b609f7ed6e27")
+		)
+		(pin "8"
+			(uuid "7820ad76-c1d8-4b66-8d72-c4f65944bdd7")
+		)
+		(pin "9"
+			(uuid "fb1c1e66-fb15-4831-8aa1-3a4a38f921b7")
+		)
+		(instances
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 128.27 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a9083a5f-d995-4a27-8252-4c8ff3930a79")
+		(property "Reference" "#PWR011"
+			(at 128.27 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 128.397 79.3242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ba0731a-e702-456f-afe1-e338021c10d8")
+		)
+		(instances
+			(project "IoT12 Control Board"
+				(path "/2454fd1b-3484-4838-8b7e-d26357238fe1/00000000-0000-0000-0000-000060488463"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 128.27 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9b032b3-a04c-48e5-b6b8-388d63c9541b")
+		(property "Reference" "#PWR023"
+			(at 128.27 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 128.27 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cde070f7-5d45-4c08-988e-98ae1512a7d9")
+		)
+		(instances
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 88.9 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e78ee873-db22-48c3-825e-2f7e7d89fc52")
+		(property "Reference" "#PWR011"
+			(at 88.9 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 89.027 140.2842 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0dc8982e-f1a5-4b40-897a-1a363a338d2f")
+		)
+		(instances
+			(project "IoT12 Control Board"
+				(path "/2454fd1b-3484-4838-8b7e-d26357238fe1/00000000-0000-0000-0000-000060488463"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector-extra:Pmod-host-spi")
+		(at 58.42 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fba14f32-0e49-416f-9814-7953276fdb45")
+		(property "Reference" "J5"
+			(at 67.31 55.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Pmod host SPI"
+			(at 67.31 57.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm-extra:PinSocket_1x06_P2.54mm_Horizontal"
+			(at 58.42 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://digilent.com/reference/pmod/start"
+			(at 57.15 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 58.42 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e348f4f-9b6f-4516-baa5-260e595e46c2")
+		)
+		(pin "2"
+			(uuid "140fec07-2788-42b4-881f-d35db604e770")
+		)
+		(pin "3"
+			(uuid "41ae1b3e-9875-49e8-9702-84fb7de5ff80")
+		)
+		(pin "4"
+			(uuid "5b0044aa-c1ab-4c7b-928f-412fc62349ba")
+		)
+		(pin "5"
+			(uuid "99f8af4e-d9e6-4204-8e5f-2e08a9423044")
+		)
+		(pin "6"
+			(uuid "1e121f1c-5b9c-4c31-8560-5d65f7e4a81d")
+		)
+		(instances
+			(project "at90s8535"
+				(path "/b25be410-ef2b-47a5-b0e7-4e30ab693d4d/0ca56ccd-8756-4f8d-88ea-e6f5e867e9e2"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
 )
